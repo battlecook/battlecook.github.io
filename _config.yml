@@ -5,3 +5,10 @@ name: battlecook's blog
 description: this is just a blog for me. It is a blog that written the mistakes made while developing.
 
 author: battlecook
+
+...
+collections:
+  posts:
+    output: true
+    permalink: /posts/:path/
+...
