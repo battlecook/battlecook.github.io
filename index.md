@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 phpstorm 에서 설정한 서버에 바로 upload 하는 방법
 
 

@@ -1,17 +1,7 @@
 theme: jekyll-theme-midnight
 
+name: battlecook's blog
 
+description: this is just a blog for me. It is a blog that written the mistakes made while developing.
 
-...
-collections:
-  tags:
-    output: true
-    permalink: /tags/:path/
-...
-defaults:
-  - scope:
-      path: ''
-      type: tags
-    values:
-      layout: tag
-...
+author: battlecook
