@@ -1,15 +1,7 @@
 ---
 layout: post
-title:
-phpstorm 에서 설정한 서버에 바로 upload 하는 방법
+title: phpstorm 에서 설정한 서버에 바로 upload 하는 방법
 ---
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
 phpstorm 에서 ctrl +  s 누르면 자동으로 설정한 ftp 서버로 저장하고 싶은 경우
 
@@ -20,5 +12,3 @@ Deployment -> options 에 Upload changed files automatically to the default serv
 이런경우 Tools -> deployment -> configuration
 
 Mappings 탭 밑에 Use this server as default 를 눌러주면 된다.
-</body>
-</html>
