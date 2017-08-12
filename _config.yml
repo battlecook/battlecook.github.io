@@ -1,1 +1,16 @@
 theme: jekyll-theme-midnight
+
+
+...
+collections:
+  tags:
+    output: true
+    permalink: /tags/:path/
+...
+defaults:
+  - scope:
+      path: ''
+      type: tags
+    values:
+      layout: tag
+...
