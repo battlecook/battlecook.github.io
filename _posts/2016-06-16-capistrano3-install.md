@@ -33,12 +33,19 @@ cap stage deploy 를 치면 됨
 execute :sudo, “service php-fpm reload”
 
 이런경우
+
 sudo stderr: sudo: sorry, you must have a tty to run sudo
+
 이런에러가 발생할수 있음
+
 Gemfile 에
+
 gem “sshkit-sudo”
+
 이걸 추가하고
+
 bundle 명령어를 치고
+
 execute! :sudo, “service php-fpm reload”
 
 로 수정
@@ -48,5 +55,6 @@ Capfile 에
 require ‘sshkit/sudo’ 추가해서 사용하면 됨
 
 참고 사이트
+
 https://github.com/capistrano/capistrano/blob/master/README.md
 https://github.com/kentaroi/sshkit-sudo
