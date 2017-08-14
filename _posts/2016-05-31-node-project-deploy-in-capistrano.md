@@ -33,7 +33,7 @@ set :repo_url, “git 주소를 쓰면되는데 http의 경우 http:// ID : PASS
 
 운영해본 결과 node_module 을 미리 다 다운로드 받은후 받아놓은 소스를 배포하는게 더 효율적으로 보임
 
-reference url
+참고 사이트
 
 https://semaphoreci.com/community/tutorials/how-to-deploy-node-js-applications-with-capistrano
 
