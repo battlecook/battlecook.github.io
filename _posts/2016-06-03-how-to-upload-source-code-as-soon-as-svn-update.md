@@ -15,6 +15,8 @@ phpstorm 에서
 
 Tools -> deployment -> options 에 ‘Upload external changes’ 를 선택하면 됨
 
+![phpstorm screenshot]({{ site.url }}/assets/upload_external_changes.png)
+
 참고 사이트
 
 http://stackoverflow.com/questions/21257966/phpstorm-automatically-upload-to-default-server-after-update-from-svn
