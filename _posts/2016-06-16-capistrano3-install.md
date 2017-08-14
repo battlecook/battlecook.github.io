@@ -7,9 +7,12 @@ rvm 으로 루비를 설치한후 (rvm으로 반드시 설치해야함)
 
 Gemfile 임의로 만들고
 
+<pre><code>
 group :development do
   gem "capistrano", "~> 3.4"
 end
+</code></pre>
+
 bundle install
 
 bundle exec cap install
