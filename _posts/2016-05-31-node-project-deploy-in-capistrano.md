@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Capistrano 3 로 node project deploy 하기
+title: capistrano 3 로 node project deploy 하기
 ---
 
 보통 nodejs 프로젝트는 모듈의 의존성을 따로 관리함

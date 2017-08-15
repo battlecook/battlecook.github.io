@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Capistrano3 install
+title: capistrano3 install
 ---
 
 rvm 으로 루비를 설치한후 (rvm으로 반드시 설치해야함)

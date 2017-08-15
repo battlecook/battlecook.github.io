@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Flatbuffer 의 cpu 사용량 이슈 
+title: google flatbuffer 의 cpu 사용량 이슈 
 ---
 
 aws 에 띄워놓은 php 소켓 서버가 cpu 사용률이 100% 를 먹는 이슈가 있었다.
