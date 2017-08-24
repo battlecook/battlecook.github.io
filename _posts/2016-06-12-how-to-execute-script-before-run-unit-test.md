@@ -21,7 +21,9 @@ bootstrap=”db_init.php”
 
 Run/Debug Configurations 에서 Test Runner -> Use alternative configuration file: 에 만들어놓은 phpunit.xml 를 선택하면 됨
 
-참고 사이트
+<br>
+
+관련 링크
 
 http://stackoverflow.com/questions/8085641/with-phpunit-how-does-one-run-initialization-code-before-any-tests-are-run
 

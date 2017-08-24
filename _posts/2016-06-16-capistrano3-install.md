@@ -57,7 +57,9 @@ Capfile 에
 
 require ‘sshkit/sudo’ 추가해서 사용하면 됨
 
-참고 사이트
+<br>
+
+관련 링크
 
 https://github.com/capistrano/capistrano/blob/master/README.md
 

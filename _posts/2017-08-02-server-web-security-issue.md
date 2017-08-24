@@ -51,7 +51,7 @@ AWS에 security group에 ICMP  프로토콜을 제거 하니 nmap 자체가 되�
 
 <br>
 
-관련 링크 :
+관련 링크
 
 http://blog.radup.net/34
 
