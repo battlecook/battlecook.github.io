@@ -5,13 +5,14 @@ title: nginx, php-fpm 간 통신
 
 기본적으로 웹서버 구조는
 
-![webserver_cgi](../assets/webserver_cgi.png)
+
+![webserver_cgi]({{ site.url }}/assets/webserver_cgi.png)
 
 와 같다.
 
 nginx 와 php 를 사용하는 경우
 
-![nginx_php_fpm](../assets/nginx_php_fpm.png)
+![nginx_php_fpm]({{ site.url }}/assets/nginx_php_fpm.png)
 
 와 같이 된다.
 
@@ -71,7 +72,7 @@ fastcgi_pass   unix:/var/run/php7-fpm.sock;
 
 설정 후
 
-![unixsocket_path](../assets/unixsocket_path.png)
+![unixsocket_path]({{ site.url }}/assets/unixsocket_path.png)
 
 nginx 와 php-fpm 소켓통신의 경우 접근이 잦기 때문에
 
