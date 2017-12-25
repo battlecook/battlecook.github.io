@@ -17,7 +17,7 @@ php socket 서버는 <a href = https://github.com/walkor/Workerman >Workerman</a
 
 특별한점 찾지 못함
 
-php 의 가비지 컬렉터를 의시함
+php 의 가비지 컬렉터를 의심함
 
 역시 특별한점 찾지 못함 
 
