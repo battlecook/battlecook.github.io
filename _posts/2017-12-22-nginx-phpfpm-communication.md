@@ -74,6 +74,8 @@ fastcgi_pass   unix:/var/run/php7-fpm.sock;
 
 ![unixsocket_path]({{ site.url }}/assets/unixsocket_path.png)
 
+설정한 경로에 파일이 생김을 알 수 있다. (리눅스는 소켓을 파일 취급 한다.)
+
 nginx 와 php-fpm 소켓통신의 경우 접근이 잦기 때문에
 
 /dev/shm 경로 아래에 넣어주면 약간의 속도 향상 효과를 얻을 수 있다.
