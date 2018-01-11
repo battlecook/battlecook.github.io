@@ -3,9 +3,10 @@ layout: post
 title: google flatbuffer 의 cpu 사용량 이슈 
 ---
 
-php 소켓 서버로 사용한 라이브러리 : <a href = https://github.com/walkor/Workerman >Workerman</a>
+php 소켓 서버로 사용한 라이브러리 : <a href = "https://github.com/walkor/Workerman"> Workerman </a>
 
-클라이언트와 데이터 통신시 사용한 직렬화 라이브러리 : <a href =  https://google.github.io/flatbuffers/ > flatbuffers </a>
+
+클라이언트와 데이터 통신시 사용한 직렬화 라이브러리 : <a href =  "https://google.github.io/flatbuffers/" > flatbuffers </a>
 
 workerman, flatbuffer php library 설치
 
