@@ -7,7 +7,7 @@ aws 프리티어 신청후
 
 lvs, was, db  를 인프라를 구축해봤다.
 
-aws의 elastic load balance , ec2, rds 로 구축을 하고
+aws의 elastic load balance, ec2, rds 로 구축을 하고
 
 was에 nginx, php-fpm 으로 웹서버를 구축한 후 웹요청을 받아서 pdo 로 디비접속시 익셉션이 떨어졌다.
 
@@ -29,7 +29,7 @@ was에 접속해서 pdo 커넥션 로직을 커멘드라인으로 시도 접속 
 
 nginx, php-fpm 으로 user변경후 커멘드라인에서 접속을 하기위해 su – nginx, su – php-fpm
 
-nginx, php-fpm  으로 유져변경할수 없음
+nginx, php-fpm 으로 유저 변경할수 없음
 
 직장동료의 iam  관련 이슈를 확인해보라는 권유에 ec2에 iam  rds full access 역할 부여 하였으나 접속 실패 (참고 url : http://wildpup.cafe24.com/archives/673 )
 
@@ -43,13 +43,13 @@ setenforce 0 명령어 입력후 실행 접속 성공 ..
 
 selinux 이슈로 확인함
 
-selinux관련 문서 찾기 시작
+selinux 관련 문서 찾기 시작
 
 https://kldp.org/files/selinux_140.pdf
 
 http://hodol.kr/xe/index.php?mid=note&document_srl=17532&m=0
 
-두 문서 및 위키피디아를 읽은 후 selinux 를 켜야겠다고 생각함
+위의 두 문서 및 위키피디아를 읽은 후 selinux 를 켜야겠다고 생각함
 
 selinux 킨 후
 

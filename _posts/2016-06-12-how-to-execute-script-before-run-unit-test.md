@@ -17,6 +17,30 @@ bootstrap=”db_init.php”
 
 를 넣으면 됨
 
+예시는 다음과 같음
+
+```
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        bootstrap="bootstrap/db_init.php">
+
+    <testsuites>
+        <testsuite name="My App Test Suites">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./tests</directory>
+        </whitelist>
+    </filter>
+</phpunit>
+```
+
 그 후에 phpstorm 에서
 
 Run/Debug Configurations 에서 Test Runner -> Use alternative configuration file: 에 만들어놓은 phpunit.xml 를 선택하면 됨
