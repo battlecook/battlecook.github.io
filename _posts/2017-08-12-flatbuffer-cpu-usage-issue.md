@@ -8,7 +8,7 @@ php 소켓 서버로 사용한 라이브러리 : <a href = "https://github.com/w
 
 클라이언트와 데이터 통신시 사용한 직렬화 라이브러리 : <a href =  "https://google.github.io/flatbuffers/" > flatbuffers </a>
 
-workerman, flatbuffer php library 설치
+workerman, flatbuffer php 라이브러리 설치
 
 composer.json
 
