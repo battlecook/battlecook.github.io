@@ -92,7 +92,7 @@ IDL(Interface Description Language) 이라고 불리는 스키마를 작성해 �
 
 여러 플랫폼의 코드를 생성 해서 사용한다.
 
-예를들어 게임서버 작성시 클라이언트로 유니티를 사용하고 서버로 php를 사용한다면
+예를들어 클라이언트로 유니티를 사용하고 서버로 php를 사용한다면
 
 IDL을 작성하고 C# 코드와 php 코드를 생성해서 사용하는 방식이다.
 
@@ -140,7 +140,7 @@ flatc --php protocol.fbs
 
 ![flatbuffer_after screenshot]({{ site.url }}/assets/flatbuffer_after.png)
 
-protocol 디렉토리 안에를 보면
+protocol 디렉토리 안을 보면
 
 ![generated_php_code screenshot]({{ site.url }}/assets/generated_php_code.png)
 
