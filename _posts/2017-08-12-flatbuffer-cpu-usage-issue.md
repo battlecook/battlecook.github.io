@@ -98,7 +98,7 @@ IDL을 작성하고 C# 코드와 php 코드를 생성해서 사용하는 방식�
 
 간단하게 흐른 시간을 보내주는 SyncTime IDL 을 작성한후 php 코드를 생성해 보자.
 
-protocol.fbs (idl 파일)
+protocol.fbs (IDL 파일)
 
 ```
 namespace protocol;
@@ -124,7 +124,7 @@ table SyncTime {
 root_type MessageRoot;
 ```
 
-패킷 루트에 패킷타입과 버전을 붙인다. ( 물론 현재는 테스트기 때문에 의미가 있진 않다. )
+패킷 루트에 패킷타입과 버전을 붙인다. ( 물론 현재는 테스트이기 때문에 의미가 있진 않다. )
 
 바디에 SyncTime 패킷을 붙인다. SyncTime 패킷은 흐른 시간에 대한 정보만 넣었다.
 
