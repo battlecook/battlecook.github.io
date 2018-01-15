@@ -78,13 +78,13 @@ php server.php start
 
 ![workerman_cpu_usage screenshot]({{ site.url }}/assets/workerman_cpu_usage.png)
 
-0.6% 정도 사용하는 것을 볼 수 있다.
+0.3% 정도 사용하는 것을 볼 수 있다.
 
 이제 플렛버퍼를 사용해 보자.
 
 플랫버퍼 설치는 윈도우 os 에서 binary 를 아래의 경로에서 다운받아서 실행하면 된다.
 
-https://github.com/google/flatbuffers/releases
+[flatbuffers release download](https://github.com/google/flatbuffers/releases)
 
 플렛버퍼는 멀티 플랫폼을 지원하는데
 
@@ -149,6 +149,9 @@ protocol 디렉토리 안을 보면
 이제 기존 서버 코드를 수정해 보자.
 
 생성된 디렉토리 ( protocol 디렉토리 ) 전체를 기존 server.php 디렉토리에 같이 넣는다.
+
+
+![total_files screenshot]({{ site.url }}/assets/total_files.png)
 
 server.php 코드를 아래와 같이 수정해보자
 
