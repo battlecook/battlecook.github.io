@@ -7,9 +7,9 @@ title: svn update 또는 git pull 한 파일을 바로 upload 하고 싶을 경�
 
 phpstorm window 에 세팅 되어있음
 
-실제 코드 virtualbox 에 upload 되어서 돌아감
+실제 코드는 virtualbox 에 리눅스에 upload 되어서 돌아감
 
-협업시 내가 svn commit 또는 git push 한 파일을 동료가 svn update 또는 git pull  받은 경우에 바로 vm에 파일을 upload 해야하는 경우가 발생함
+협업시 내가 svn commit 또는 git push 한 파일을 동료가 svn update 또는 git pull 받은 경우에 바로 vm에 파일을 upload 해야하는 경우가 발생함
 
 phpstorm 에서
 
