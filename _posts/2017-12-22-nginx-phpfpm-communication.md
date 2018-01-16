@@ -146,9 +146,7 @@ print_r($end - $start);
 | tcp/ip socket |  2.2519| 2.5132|2.3198 |2.4347 | 2.4336 |
 | unix socket | 2.4471 | 2.3182 | 2.1452 | 2.1803 | 1.9307 |
 
-
-
-
+<br>
 
 ## 참고 사이트
 
@@ -159,3 +157,13 @@ print_r($end - $start);
 - [nginx](http://nginx.org/en/docs/beginners_guide.html)
 
 - [phpfpm fastcgi_pass](https://easyengine.io/tutorials/php/fpm-sysctl-tweaking/)
+
+
+
++
+
+1) 팀 동료가 tcp/ip socket 을 unix socket 으로 수정후 테스트 케이스 1000개 정도의 속도가 1분정도 감소 하는 효과가 있었다고 말 해줬다.
+
+2) 또다른 팀 동료는 tcp/ip socket 대신 unix socket 사용하는 이유는 tcp/ip socket 은 close 시에 프로세스가 time wait 가 걸려서 바로 반환 하지 않기 때문에
+소켓 개수 제한에 금방 걸릴수 있어서 unix socket 으로 대체 한다고 말해 줬다. 관련 내용은 다시 찾아봐야 할 거 같다.
+
