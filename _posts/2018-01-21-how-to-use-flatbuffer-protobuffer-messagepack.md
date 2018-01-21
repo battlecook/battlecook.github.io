@@ -174,7 +174,6 @@ class ProtocolBufferTest extends TestCase
     }
 }
 
-
 ```
 
 마지막으로 메시지팩에 대해 살펴 보자.
