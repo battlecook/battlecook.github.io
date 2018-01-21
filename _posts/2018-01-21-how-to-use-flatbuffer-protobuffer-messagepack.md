@@ -7,17 +7,17 @@ title: flatbuffer, protocolbuffer, messagepack 사용법
 
 토비의 스프링 이라는 책을 보면 이런 테스트를 학습 테스트 라고 부른다고 한다.
 
-[프로토콜버퍼](https://developers.google.com/protocol-buffers/)
-[플랫버퍼](https://google.github.io/flatbuffers/)
-[메세지팩](https://msgpack.org/)
+[프로토콜버퍼](https://developers.google.com/protocol-buffers/),
+[플랫버퍼](https://google.github.io/flatbuffers/),
+[메시지팩](https://msgpack.org/)
 
 을 php 에서 사용하기 위한 학습 테스트를
 
 아주 간단하게 만들어 봤다.
 
-[이전 포스팅](https://battlecook.github.io/2017/08/12/flatbuffer-cpu-usage-issue.html)에서도 잠시 언급 했다 시피
+[이전 포스팅](https://battlecook.github.io/2017/08/12/flatbuffer-cpu-usage-issue.html)
 
-플렛버퍼와 프로토콜버퍼는 멀티 플랫폼을 지원하는데
+에서도 잠시 언급 했다 시피 플렛버퍼와 프로토콜버퍼는 멀티 플랫폼을 지원하는데
 
 IDL(Interface Description Language) 이라고 불리는 스키마를 작성해 두고
 
@@ -179,9 +179,9 @@ class ProtocolBufferTest extends TestCase
 
 마지막으로 메시지팩에 대해 살펴 보자.
 
-메시지팩은 유명한 메모리 캐시 솔루션인 레디스 에서 메시지를 주고받을때 사용중인 직렬화 포맷이다.
+메시지팩은 유명한 메모리 캐시 솔루션인 레디스에서 메시지를 주고받을때 사용중인 직렬화 포맷이다.
 
-굉장히 다양한 언어를 지원 중에 있다.
+굉장히 다양한 언어를 지원 하고 있다.
 
 메시지팩의 경우 따로 IDL 을 작성할 필요가 없다.
 
@@ -195,7 +195,7 @@ class MessagePackTest extends TestCase
         //given
         $elapsedTime = 10;
 
-        $type = 0;
+        $type = 1;
         $packet = array('type'=> $type, 'SyncTime' => $elapsedTime);
 
         //when
