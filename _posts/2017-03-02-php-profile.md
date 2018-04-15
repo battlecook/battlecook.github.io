@@ -11,6 +11,8 @@ xhprof 를 사용중이 였는데 <a href = "https://github.com/phacility/xhprof
 
 다른 프로파일러를 찾던중에
 
-<a href = "https://github.com/jokkedk/webgrind/wiki/Installation"> webgrinder </a>라는 툴을 발견 함
+<a href = "https://github.com/jokkedk/webgrind/wiki/Installation"> webgrind </a>라는 툴을 발견 함
+
+xdebug profiler 를 쓰는 툴임
 
 ![phpstorm screenshot]({{ site.url }}/assets/webgrinder_maintain_term.png)
