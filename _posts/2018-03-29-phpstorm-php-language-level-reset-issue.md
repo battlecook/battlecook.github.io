@@ -5,6 +5,8 @@ title: Phpstorm 재시작시 Php language level 세팅 리셋 이슈
 
 개발 중 php7.1 에서 추가된 기능 사용시 phpstorm 에서 문법 에러를 내고 있었다.
 
+![phpstorm screenshot]({{ site.url }}/assets/php_language_level_in_phpstorm.png)
+
 php language level 이 7 로 되어있어서 7.1로 수정 후 작업을 했었는데
 
 며칠뒤에 세팅이 다시 7로 롤백 되어있어서 원인을 좀 찾아 보았다.
@@ -33,7 +35,7 @@ composer.json 설정을 보니
 ```
 
 
-...
+composer 에 명시한 php 버전을 따라 간다고 생각하고
 
 
 ```
@@ -49,5 +51,5 @@ composer.json 설정을 보니
 
 재시작 했다.
 
-리셋되지 않았다.
+php language level 7.1 로 세팅 되었다.
 
