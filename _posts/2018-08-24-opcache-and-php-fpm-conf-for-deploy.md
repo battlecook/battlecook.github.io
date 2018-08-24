@@ -111,7 +111,7 @@ reload 는 즉시 php-fpm 프로세스를 내리지 않고 일정시간 이후 �
  
  php-fpm 의 프로세스 시간은 아래의 옵션 값을 따라 갑니다.
  
- ![opcache_validate_timestamps_option]({{ site.url }}/assets/opcache_validate_timestamps_option.png)
+ ![phpfpm_request_terminate_timeout_option]({{ site.url }}/assets/phpfpm_request_terminate_timeout_option.png)
   
  process_control_timeout 값은 request_terminate_timeout 값 보다 크게 잡아 두는 것이 좋습니다.
  
