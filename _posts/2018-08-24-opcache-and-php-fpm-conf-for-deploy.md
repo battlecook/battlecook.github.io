@@ -14,13 +14,13 @@ main.php 파일이 있고
 ```
 <?php
 
-include "lib.php";
+include __DIR__ . "/lib.php";
 
 echo "world";
 
 ```
 
-lib.php 파일이 있다고 합시다.
+같은 경로에 lib.php 파일이 있다고 합시다.
 
 ```
 <?php
@@ -41,7 +41,7 @@ main.php
 ```
 <?php
 
-include "lib.php";
+include __DIR__ . "/lib.php";
 
 echo "an idealist.";
 
@@ -99,7 +99,7 @@ restart 는 서비스를 내렸다가 다시 시작 하는 것이고
 
 reload 는 서비스를 죽이지 않고 config 를 다시 읽습니다.  
 
-그럼 여기서 한가지 의문이 있는데요 언제 config 를 다시 읽을 것이냐 입니다. 
+그럼 여기서 한가지 의문이 있습니다. 언제 config 를 다시 읽을 것이냐 입니다. 
 
 그때 필요한 옵션이 php-fpm.conf 의 process_control_timeout 입니다.
 
@@ -107,7 +107,12 @@ reload 는 서비스를 죽이지 않고 config 를 다시 읽습니다.
  
  이 값을 0으로 하면 기존에 떠 있던 php-fpm 프로세스를 기다리지 않기 때문에 기껏 restart 를 reload 로 한 의미가 없어 집니다.
  
- 기존 프로세스가 다 처리 될 정도의 시간 값을 세팅 해 두고 사용 하시길 추천 합니다.
+ 기존 프로세스가 다 처리 될 정도의 시간 값을 세팅 해 두는 게 좋습니다.
  
+ php-fpm 의 프로세스 시간은 아래의 옵션 값을 따라 갑니다.
+ 
+ ![opcache_validate_timestamps_option]({{ site.url }}/assets/opcache_validate_timestamps_option.png)
   
+ process_control_timeout 값은 request_terminate_timeout 값 보다 크게 잡아 두는 것이 좋습니다.
+ 
  
