@@ -95,11 +95,11 @@ php-fpm restart 를 하는 경우 기존에 떠 있던 프로세스는 모두 �
 
 둘의 차이는 
 
-restart 는 서비스를 내렸다가 다시 시작 하는 것이고 
+restart 는 즉시 php-fpm 프로세스를 내렸다가 다시 시작 하는 것이고 
 
-reload 는 서비스를 죽이지 않고 config 를 다시 읽습니다.  
+reload 는 즉시 php-fpm 프로세스를 내리지 않고 일정시간 이후 내렸다가 올립니다.  
 
-그럼 여기서 한가지 의문이 있습니다. 언제 config 를 다시 읽을 것이냐 입니다. 
+그럼 여기서 한가지 의문이 있습니다. 그렇다면 reload 시 언제 다시 프로세스를 올릴 것이냐 입니다. 
 
 그때 필요한 옵션이 php-fpm.conf 의 process_control_timeout 입니다.
 
