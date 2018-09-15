@@ -1,6 +1,6 @@
 ---
 layout: post
-title: phpredis set 함수 timeout 인자 사용시 이슈
+title: phpredis set 함수 timeout 인자 사용
 ---
 
 익스텐션 라이브러리 redis 를 래핑한 함수로 사용중에 set 함수를 사용할 일이 있었습니다.
@@ -119,9 +119,11 @@ plugins\php\lib\php.jar!\stubs\redis\Redis.php 경로의 stub 을 보면
 
 3.0.0 인걸 확인했습니다. pecl 코드는 [해당사이트](https://pecl.php.net/) 에서 검색해 볼 수 있습니다.
 
-pecl redis 는 https://pecl.php.net/package/redis 여기서 확인해 볼수 있습니다. phpredis 라이브러리를 사용중이네요.
+pecl redis 는 https://pecl.php.net/package/redis 여기서 확인해 볼수 있습니다. 
 
-다행히 접근하기 쉽게 깃헙에 소스 코드가 있는걸 확인할 수 있습니다.
+phpredis 라이브러리를 사용중이네요.
+
+접근하기 쉽게 깃헙에 소스 코드가 있는걸 확인할 수 있습니다.
 
 자 이제 깃헙 소스코드를 확인해 보도록 합시다.
 
@@ -139,8 +141,6 @@ expire 가 1보다 작으면 FAILURE 를 반환하게 되어있습니다.
 
 아마도 너무작은 값으로 set 을 주면 set 을 하자마자 지워지게 되므로 의미가 없어서 저렇게 처리 된 거 같습니다.
 
-해당 이슈에 맞게 php 코드를 수정하였고 테스트 케이스가 실패 업이 동작 하였습니다.
+해당 이슈에 맞게 php 코드를 수정하였고 테스트 케이스가 실패 없이 동작 하였습니다.
 
-ide 의 스텁이 어떻게 만들어지는 잘 모르지만 ide 의 스텁도 틀릴 경우가 있고 
-
-틀렸을시 실제 구현 코드를 확인해서 이슈를 수정할 수 있었습니다.
+ide 의 스텁도 틀릴 경우가 있고 틀렸을시 실제 구현 코드를 확인해서 이슈를 수정할 수 있었습니다.
