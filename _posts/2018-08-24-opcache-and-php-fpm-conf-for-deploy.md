@@ -79,7 +79,7 @@ hello an idealist.
 
 이 때 사용할 옵션이 opcache.ini 의 opcache.validate_timestamps 입니다.
 
-![opcache_validate_timestamps_option]({{ site.url }}/assets/opcache_validate_timestamps_option.png)
+![opcache_validate_timestamps_option]({{ site.url }}/assets/20180824/opcache_validate_timestamps_option.png)
 
 true 또는 1 일 경우엔 파일이 바뀌면 자동으로 캐싱되어있는 php 파일을 바꾸고 
 
