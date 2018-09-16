@@ -7,7 +7,7 @@ title: 서버 웹 보안 이슈
 
 관련 로그는 아래와 같다.
 
-![nginx access log]({{ site.url }}/assets/webserver_hacking.png)
+![nginx access log]({{ site.url }}/assets/20170802/webserver_hacking.png)
 
 
 위와 같이 웹서버 에서 보편적으로 사용하는 admin 페이지나 혹은 db 관련 정보를 얻을 수 있을법한 경로를 무작위로 뒤지는 공격이 들어왔다. 그것도 끊임없이 계속… 인터넷을 뒤져보니 Jorgee라는 웹 취약점 찾는 도구란다;;

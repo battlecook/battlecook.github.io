@@ -86,7 +86,7 @@ set 함수를 사용하던 클라이언트 코드들에 모두 expireTime 을 �
 
 plugins\php\lib\php.jar!\stubs\redis\Redis.php 경로의 stub 을 보면
 
-![phpredis_memcache_set_stub]({{ site.url }}/assets/phpredis_memcache_set_stub.png)
+![phpredis_memcache_set_stub]({{ site.url }}/assets/20180914/phpredis_memcache_set_stub.png)
 
 위와 같이 timeout 값은 0으로 세팅 된다고 되어있었습니다.
 
@@ -111,11 +111,11 @@ plugins\php\lib\php.jar!\stubs\redis\Redis.php 경로의 stub 을 보면
 
 일단 php.d 에 설치되어 있으므로 익스텐션 라이브러리 라는걸 확인합니다.
 
-![ll_redis_extension_library]({{ site.url }}/assets/ll_redis_extension_library.png)
+![ll_redis_extension_library]({{ site.url }}/assets/20180914/ll_redis_extension_library.png)
 
 버전이 몇인지 확인해봅니다. 
 
-![yum_list_installed_php_pecl_redis]({{ site.url }}/assets/yum_list_installed_php_pecl_redis.png)
+![yum_list_installed_php_pecl_redis]({{ site.url }}/assets/20180914/yum_list_installed_php_pecl_redis.png)
 
 3.0.0 인걸 확인했습니다. pecl 코드는 [해당사이트](https://pecl.php.net/) 에서 검색해 볼 수 있습니다.
 
@@ -133,11 +133,11 @@ redis_commands.c 파일에 redis_set_cmd 함수를 보면 문제의 원인을 �
 
 php 코드에서 set 함수에 옵션을 주면 해당 로직을 타는거 같네요.
 
-![phpredis_redis_set_cmd_optional_logic]({{ site.url }}/assets/phpredis_redis_set_cmd_optional_logic.png)
+![phpredis_redis_set_cmd_optional_logic]({{ site.url }}/assets/20180914/phpredis_redis_set_cmd_optional_logic.png)
 
 expire 가 1보다 작으면 FAILURE 를 반환하게 되어있습니다.
 
-![set_timeout_must_do_bigger_than_1_seconds]({{ site.url }}/assets/set_timeout_must_do_bigger_than_1_seconds.png)
+![set_timeout_must_do_bigger_than_1_seconds]({{ site.url }}/assets/20180914/set_timeout_must_do_bigger_than_1_seconds.png)
 
 아마도 너무작은 값으로 set 을 주면 set 을 하자마자 지워지게 되므로 의미가 없어서 저렇게 처리 된 거 같습니다.
 

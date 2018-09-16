@@ -130,7 +130,7 @@ message SyncTime {
 
 protoc.exe 파일과 같은 경로에 protocol.proto 파일을 넣는다
 
-![protocolbuffer_before screenshot]({{ site.url }}/assets/protocolbuffer_before.png)
+![protocolbuffer_before screenshot]({{ site.url }}/assets/20180121/protocolbuffer_before.png)
 
 아래의 명령어를 실행하면
 
@@ -138,7 +138,7 @@ protoc.exe 파일과 같은 경로에 protocol.proto 파일을 넣는다
 protoc --php_out=./ protocol.proto
 ```
 
-![protocobuffer_after screenshot]({{ site.url }}/assets/flatbuffer_after.png)
+![protocolbuffer_after screenshot]({{ site.url }}/assets/20180121/protocolbuffer_after.png)
 
 생성된 디렉토리 안을 보면 php 코드가 생성되어져 있는것을 확인 할 수 있다.
 

@@ -70,13 +70,13 @@ php server.php start
 
 위의 명령어를 실행한다.
 
-![workerman start screenshot]({{ site.url }}/assets/workerman_start.png)
+![workerman start screenshot]({{ site.url }}/assets/20170812/workerman_start.png)
 
 정상동작 하는 것을 볼수있다.
 
 아마존에서 프리티어로 주는 ec2 에 위에 작성한 코드를 올린후 cpu 사용량을 측정해 보았다.
 
-![workerman_cpu_usage screenshot]({{ site.url }}/assets/workerman_cpu_usage.png)
+![workerman_cpu_usage screenshot]({{ site.url }}/assets/20170812/workerman_cpu_usage.png)
 
 0.3% 정도 사용하는 것을 볼 수 있다.
 
@@ -130,7 +130,7 @@ root_type MessageRoot;
 
 플렛버퍼 바이너리 flatc 와 같은 경로에 protocol.fbs 파일을 넣는다
 
-![flatbuffer_before screenshot]({{ site.url }}/assets/flatbuffer_before.png)
+![flatbuffer_before screenshot]({{ site.url }}/assets/20170812/flatbuffer_before.png)
 
 아래의 명령어를 실행하면
 
@@ -138,11 +138,11 @@ root_type MessageRoot;
 flatc --php protocol.fbs
 ```
 
-![flatbuffer_after screenshot]({{ site.url }}/assets/flatbuffer_after.png)
+![flatbuffer_after screenshot]({{ site.url }}/assets/20170812/flatbuffer_after.png)
 
 protocol 디렉토리 안을 보면
 
-![generated_php_code screenshot]({{ site.url }}/assets/generated_php_code.png)
+![generated_php_code screenshot]({{ site.url }}/assets/20170812/generated_php_code.png)
 
 다음과 같이 코드가 생성된것을 볼 수 있다.
 
@@ -151,7 +151,7 @@ protocol 디렉토리 안을 보면
 생성된 디렉토리 ( protocol 디렉토리 ) 전체를 기존 server.php 디렉토리에 같이 넣는다.
 
 
-![total_files screenshot]({{ site.url }}/assets/total_files.png)
+![total_files screenshot]({{ site.url }}/assets/20170812/total_files.png)
 
 server.php 코드를 아래와 같이 수정해보자
 
@@ -217,7 +217,7 @@ Worker::runAll();
 
 CPU 사용량을 측정해 보았다.
 
-![flatbuffer_cpu_usage screenshot]({{ site.url }}/assets/flatbuffer_cpu_usage.png)
+![flatbuffer_cpu_usage screenshot]({{ site.url }}/assets/20170812/flatbuffer_cpu_usage.png)
 
 7% 정도 사용하는 것을 볼 수 있다.
 

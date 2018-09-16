@@ -103,7 +103,7 @@ reload 는 즉시 php-fpm 프로세스를 내리지 않고 일정시간 이후 �
 
 그때 필요한 옵션이 php-fpm.conf 의 process_control_timeout 입니다.
 
- ![phpfpm_process_control_timeout_option]({{ site.url }}/assets/phpfpm_process_control_timeout_option.png)
+ ![phpfpm_process_control_timeout_option]({{ site.url }}/assets/20180824/phpfpm_process_control_timeout_option.png)
  
  이 값을 0으로 하면 기존에 떠 있던 php-fpm 프로세스를 기다리지 않기 때문에 기껏 restart 를 reload 로 한 의미가 없어 집니다.
  
@@ -111,7 +111,7 @@ reload 는 즉시 php-fpm 프로세스를 내리지 않고 일정시간 이후 �
  
  php-fpm 의 프로세스 시간은 아래의 옵션 값을 따라 갑니다.
  
- ![phpfpm_request_terminate_timeout_option]({{ site.url }}/assets/phpfpm_request_terminate_timeout_option.png)
+ ![phpfpm_request_terminate_timeout_option]({{ site.url }}/assets/20180824/phpfpm_request_terminate_timeout_option.png)
   
  process_control_timeout 값은 request_terminate_timeout 값 보다 크게 잡아 두는 것이 좋습니다.
  

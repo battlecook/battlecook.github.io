@@ -15,7 +15,7 @@ phpstorm 에서
 
 Tools -> deployment -> options 에 ‘Upload external changes’ 를 선택하면 됨
 
-![phpstorm screenshot]({{ site.url }}/assets/upload_external_changes.png)
+![phpstorm screenshot]({{ site.url }}/assets/20160603/upload_external_changes.png)
 
 <br>
 
