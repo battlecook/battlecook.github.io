@@ -38,7 +38,7 @@ hello world
 
 main.php
 
-```
+```php
 <?php
 
 include __DIR__ . "/lib.php";
@@ -49,7 +49,7 @@ echo "an idealist.";
 
 lib.php
 
-```
+```php
 <?php
 
 echo "I am ";

@@ -20,7 +20,7 @@ title: include 함수 사용시 ./ 경로 이슈
 
 /tmp/php_include_test/project/test.php 코드
 
-```
+```php
 <?php
 
 include './vars.php';

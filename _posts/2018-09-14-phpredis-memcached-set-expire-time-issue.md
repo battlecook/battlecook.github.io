@@ -7,7 +7,8 @@ title: phpredis set 함수 timeout 인자 사용
 
 간단하게 코드를 써보자면
 
-```
+```php
+<?php
 class RedisWrapper
 {
     private $redis;
@@ -56,7 +57,7 @@ class RedisWrapper
 
 당연히 래핑 함수는
  
-```
+```php
     public function set(string $key, $value, $expireTime)
     {
         $this->redis->set($key, $value);
@@ -92,7 +93,7 @@ plugins\php\lib\php.jar!\stubs\redis\Redis.php 경로의 stub 을 보면
 
 사용중인 레디스레핑 함수에 디폴트 expireTime 값을 0 으로 세팅하엿습니다.
 
-```
+```php
     public function set(string $key, $value, $expireTime = 0)
     {
         $this->redis->set($key, $value);
