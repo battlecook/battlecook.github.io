@@ -22,7 +22,7 @@ echo "world";
 
 같은 경로에 lib.php 파일이 있다고 합시다.
 
-```
+```php
 <?php
 
 echo "hello ";
