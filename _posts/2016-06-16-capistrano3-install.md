@@ -128,17 +128,17 @@ sudo stderr: sudo: sorry, you must have a tty to run sudo
 
 Gemfile 에
 
-gem “sshkit-sudo”
+gem "sshkit-sudo"
 
 이걸 추가하고
 
-bundle 명령어를 치고
+bundle 명령어를 치고 ( 혹은 gem install sshkit-sudo 를 칩니다. )
 
 execute! :sudo, “service php-fpm reload”
 
 로 수정 후 Capfile 에
 
-require ‘sshkit/sudo’ 추가해서 사용하면 됩니다.
+require "sshkit/sudo" 추가해서 사용하면 됩니다.
 
 
 #### 참고 사이트
