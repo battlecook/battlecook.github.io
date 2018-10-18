@@ -74,13 +74,15 @@ fastcgi_pass   unix:/var/run/php7-fpm.sock;
 
 ![unixsocket_path]({{ site.url }}/assets/20171222/unixsocket_path.png)
 
-설정한 경로에 파일이 생김을 알 수 있다. (리눅스는 소켓을 파일 취급 한다.)
+설정한 경로에 파일이 생김을 알 수 있습니다. 
+
+(리눅스는 소켓을 파일 취급 합니다.)
 
 nginx 와 php-fpm 소켓통신의 경우 접근이 잦기 때문에
 
-/dev/shm 경로 아래에 넣어주면 약간의 속도 향상 효과를 얻을 수 있다.
+/dev/shm 경로 아래에 넣어주면 약간의 속도 향상 효과를 얻을 수 있습니다.
 
-/dev/shm 은 실제로 메모리를 점유하는건 아니지만 사용하는 만큼 램을 사용한다.
+/dev/shm 은 실제로 메모리를 점유하는건 아니지만 사용하는 만큼 램을 사용하는데
 
 결국
 
@@ -96,9 +98,9 @@ nginx 설정
 fastcgi_pass   unix:/dev/shm/php7-fpm.sock;
 ```
 
-으로 수정하면 된다.
+으로 수정하면 됩니다.
 
-아주 간단하게 벤치마킹을 해보자.
+아주 간단하게 벤치마킹을 해봅시다.
 
 server 코드
 
@@ -146,7 +148,7 @@ print_r($end - $start);
 | tcp/ip socket |  2.2519| 2.5132|2.3198 |2.4347 | 2.4336 |
 | unix socket | 2.4471 | 2.3182 | 2.1452 | 2.1803 | 1.9307 |
 
-<br>
+<br><br/>
 
 #### 참고 사이트
 
@@ -162,8 +164,17 @@ print_r($end - $start);
 
 +
 
-1) 팀 동료가 tcp/ip socket 을 unix socket 으로 수정후 테스트 케이스 1000개 정도의 속도가 1분정도 감소 하는 효과가 있었다고 말 해줬다.
+1) 
 
-2) 또다른 팀 동료는 tcp/ip socket 대신 unix socket 사용하는 이유는 tcp/ip socket 은 close 시에 프로세스가 time wait 가 걸려서 바로 반환 하지 않기 때문에
-소켓 개수 제한에 금방 걸릴수 있어서 unix socket 으로 대체 한다고 말해 줬다. 관련 내용은 다시 찾아봐야 할 거 같다.
+팀 동료가 tcp/ip socket 을 unix socket 으로 수정후 테스트 케이스 1000개 정도의 속도가 1분정도 감소 하는 효과가 있었다고 말 해줬습니다.
+
+2) 
+
+또다른 팀 동료는 tcp/ip socket 대신 unix socket 사용하는 이유는 
+
+tcp/ip socket 은 close 시에 프로세스가 time wait 가 걸려서 바로 반환 하지 않기 때문에
+
+소켓 개수 제한에 금방 걸릴수 있어서 unix socket 으로 대체 한다고 말해 줬다. 
+
+관련 내용은 다시 찾아봐야 할 거 같습니다.
 
