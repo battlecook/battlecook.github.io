@@ -41,25 +41,13 @@ rvm install ruby-2.5.1
 
 ![ruby-required-packaged-error]({{ site.url }}/assets/20160616/ruby-required-packaged-error.png)
 
-미리 설치되어져야 할 패키지 목록들이 없어서 에러가 나네요. 먼저 설치를 합시다.
+미리 설치되어져야 할 패키지 목록들이 뜨는데 비번을 쳐주면 패키지들이 설치가 됩니다.
 
-```
- sudo yum install  patch, autoconf, automake, bison, bzip2, gcc-c++, libffi-devel, libtool, patch, readline-devel, sqlite-devel, zlib-devel, glibc-headers, glibc-devel, openssl-devel
-```
+(위 스크린샷은 최초에 비번을 써야하는건지 몰라서 엔터 쳤다가 에러난 스샷입니다. ㅠㅠ)
 
-설치 후에도 계속해서 에러가 나서 구글링을 좀 해본결과 sudoers 에 user 계정을 넣고 아래의 명령어를 치면 해결이 됐습니다.
-
-하지만 뭔가 찜찜해 보입니다. 일단 진행해 봅시다.
-
-```
-rvmsudo rvm install 2.5.1
-```
+정상적으로 설치가 되면 아래와 같은 화면을 보실수 있습니다.
 
 ![ruby-install-complete]({{ site.url }}/assets/20160616/ruby-install-complete.png)
-
-```
-rvm use 2.5.1
-```
 
 루비가 잘 설치 되어있는지 확인합니다.
 
@@ -115,7 +103,7 @@ cap stage deploy 를 치면 됩니다.
 이를테면 
 
 ```
-execute :sudo, “service php-fpm reload”
+execute :sudo, "service php-fpm reload"
 ```
 
 이런 명령어를 쳐야 할 경우
@@ -132,9 +120,9 @@ gem "sshkit-sudo"
 
 이걸 추가하고
 
-bundle 명령어를 치고 ( 혹은 gem install sshkit-sudo 를 칩니다. )
+bundle 명령어를 치고 ( 혹은 gem install sshkit-sudo 를 쳐서 설치합니다. )
 
-execute! :sudo, “service php-fpm reload”
+execute! :sudo, "service php-fpm reload"
 
 로 수정 후 Capfile 에
 
@@ -148,3 +136,5 @@ require "sshkit/sudo" 추가해서 사용하면 됩니다.
 - [rvm 공식 사이트](https://rvm.io/)
 
 - [카피스트라노 공식 사이트](https://capistranorb.com/documentation/getting-started/installation/)
+
+- [rvm 설치 한국어 포스팅](http://bigmatch.i-um.net/2013/12/04/%EB%A9%98%EB%B6%95%EC%97%86%EC%9D%B4-rvm%EA%B3%BC-%EB%A3%A8%EB%B9%84-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/)
