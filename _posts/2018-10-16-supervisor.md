@@ -11,11 +11,8 @@ title:  supervisor 사용
 
 위의 기능을 가능하게 해주는 프로그램이 슈퍼바이저 입니다. 
 
-<br>
 
 # 슈퍼바이저 설치
-
-<br>
 
 일단 슈퍼 바이저를 설치해 봅시다. 
 
@@ -31,15 +28,57 @@ yum install supervisor
 ps -ef | grep supervisor
 ```
 
-이제 슈퍼바이저를 사용해 봅시다.
+# 슈퍼바이저 사용
+ 
+슈퍼바이저 환경설정 파일의 기본 경로 입니다. 
+ 
+ ```
+/etc/supervisord.conf
+ ```
+ 
+ 마지막 줄에 보시면 여느 환경설정 파일들과 마찬가지로 
+ 
+```
+[include]
+files = supervisord.d/*.ini
+``` 
+ 
+다른 환경설정 파일을 만들어 인클루드 할 수 있습니다.  
 
+간단한 프로그램을 만들어 동작을 확인해 봅시다.
+ 
+server_program.php
 
- # 슈퍼바이저 사용
+```php
+<?php
+
+while(1)
+{
+   echo "I'm server program 1 \n";
+   echo "I'm alive \n";
+   sleep(3);
+}
+```
+라는 프로그램을 만듭니다.
+
+myconf.ini 
+``` 
+[program:test_program] (원하시는 프로그램명을 쓰시면 됩니다.)
+command=/usr/bin/php server_program.php
+```
+
+사용할 환경설정 파일을 만들고 
+
+```
+/etc/supervisord.d/
+```
+
+아래에 둡니다. 슈퍼바이저를 재시작 해서 동작을 확인합니다.
+
+``` 
+systemctl restart supervisor
+```
  
- 슈퍼바이저 conf
  
  
- 
- 
- 
- # 슈퍼바이저 명령어 
+# 슈퍼바이저 명령어 
