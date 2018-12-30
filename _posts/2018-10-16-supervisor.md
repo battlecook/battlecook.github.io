@@ -95,8 +95,19 @@ systemctl restart supervisor
  4번 트라이 후 포기한 것을 볼 수 있습니다.
  
  
+ 설정 파일에 startretries 옵션을 추가해서 리트라이 횟수를 조절 할 수 있습니다.
  
+ ``` 
+ [program:test_program]
+ command=/usr/bin/php server_program.php
+ startretries=7
+ ```
  
+ 로 수정후 슈퍼바이저를 실행해 봅니다.
  
+ ![supervisor_failed_7times]({{ site.url }}/assets/20181016/supervisor_failed_7times.png)
  
+ 첫 시도후 7회 리트라이한 로그를 볼 수 있습니다. 
+ 
+
 # 슈퍼바이저 명령어 
