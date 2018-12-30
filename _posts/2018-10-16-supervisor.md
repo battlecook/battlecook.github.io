@@ -46,7 +46,7 @@ files = supervisord.d/*.ini
  
 다른 환경설정 파일을 만들어 인클루드 할 수 있습니다.  
 
-간단한 프로그램을 만들어 동작을 확인해 봅시다.
+간단한 프로그램을 만들어 동작을 확인해 봅시다. <br>
  
 server_program.php
 
@@ -60,7 +60,7 @@ while(1)
    sleep(3);
 }
 ```
-라는 프로그램을 만듭니다.
+라는 프로그램을 만듭니다. <br>
 
 myconf.ini 
 ``` 
@@ -79,6 +79,23 @@ command=/usr/bin/php server_program.php
 ``` 
 systemctl restart supervisor
 ```
+ 
+ 만약 프로세스가 올라오지 않아서 로그를 확인하고 싶을경우
+ 
+``` 
+/var/log/supervisor/supervisord.log
+```
+ 
+ 를 확인 해 보시면됩니다.
+ 
+ 경로를 틀리게 한 이후에 슈퍼바이저를 실행하고 로그를 확인해 보았습니다.
+ 
+ ![supervisor_failed]({{ site.url }}/assets/20181016/supervisor_failed.png)
+ 
+ 4번 트라이 후 포기한 것을 볼 수 있습니다.
+ 
+ 
+ 
  
  
  
