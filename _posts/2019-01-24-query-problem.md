@@ -38,7 +38,7 @@ Sample table FRIEND_COUNT
 
 위의 경우에 친구 숫자가 제한이 없는 기획이라고 한다면 친구 숫자를 적는 테이블을 따로 적어 두는게 좋습니다. 
 
-하지만 어떤 이유로 FRIEND 테이블의 로우 개수와 FRIEND_COUNT 테이블의 FRIEND_COUNT 값이 싱크가 맞지 않기 시작 않을 수 있습니다.  
+하지만 어떤 이유로 FRIEND 테이블의 로우 개수와 FRIEND_COUNT 테이블의 FRIEND_COUNT 값이 싱크가 맞지 않을 수 있습니다.  
 
 위 테이블에 USER_ID 1번의 경우 FRIEND 테이블에 FRIEND_USER_ID 가 3, 4, 5, 6 4개의 로우를 가지고 있는데 FRIEND_COUNT 테이블엔 3으로 적혀있습니다.  
 

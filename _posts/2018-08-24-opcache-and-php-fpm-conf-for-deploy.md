@@ -81,9 +81,7 @@ hello an idealist.
 
 ![opcache_validate_timestamps_option]({{ site.url }}/assets/20180824/opcache_validate_timestamps_option.png)
 
-true 또는 1 일 경우엔 파일이 바뀌면 자동으로 캐싱되어있는 php 파일을 바꾸고 
-
-false 또는 0 일 경우엔 php-fpm 을 restart 했을 시에 바뀐 파일이 일괄 적으로 바뀌게 됩니다.
+true 또는 1 일 경우엔 파일이 바뀌면 자동으로 캐싱되어있는 php 파일을 바꾸고 false 또는 0 일 경우엔 php-fpm 을 restart 했을 시에 바뀐 파일이 일괄 적으로 바뀌게 됩니다.
 
 상용 서버의 경우 0 또는 false 로 바꿔서 사용 하시는게 좋습니다.
 
