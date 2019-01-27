@@ -62,41 +62,35 @@ function update()
 Worker::runAll();
 ```
 
-이코드를 실행후 cpu 사용량을 확인해 보았다.
+이코드를 실행후 cpu 사용량을 확인해 보았습니다.
 
 ```
 php server.php start
 ```
 
-위의 명령어를 실행한다.
+위의 명령어를 실행합니다.
 
 ![workerman start screenshot]({{ site.url }}/assets/20170812/workerman_start.png)
 
-정상동작 하는 것을 볼수있다.
+정상동작 하는 것을 볼수있습니다.
 
-아마존에서 프리티어로 주는 ec2 에 위에 작성한 코드를 올린후 cpu 사용량을 측정해 보았다.
+아마존에서 프리티어로 주는 ec2 에 위에 작성한 코드를 올린후 cpu 사용량을 측정해 보았습니다.
 
 ![workerman_cpu_usage screenshot]({{ site.url }}/assets/20170812/workerman_cpu_usage.png)
 
-0.3% 정도 사용하는 것을 볼 수 있다.
+0.3% 정도 사용하는 것을 볼 수 있습니다.
 
-이제 플렛버퍼를 사용해 보자.
+이제 플렛버퍼를 사용해 봅시다.
 
-플랫버퍼 설치는 윈도우 os 에서 binary 를 아래의 경로에서 다운받아서 실행하면 된다.
+플랫버퍼 설치는 윈도우 os 에서 binary 를 아래의 경로에서 다운받아서 실행하면 됩니다.
 
 [flatbuffers release download](https://github.com/google/flatbuffers/releases)
 
-플렛버퍼는 멀티 플랫폼을 지원하는데
+플렛버퍼는 멀티 플랫폼을 지원하는데 IDL(Interface Description Language) 이라고 불리는 스키마를 작성해 두고 여러 플랫폼의 코드를 생성 해서 사용합니다.
 
-IDL(Interface Description Language) 이라고 불리는 스키마를 작성해 두고
+예를들어 클라이언트로 유니티를 사용하고 서버로 php를 사용한다면 IDL을 작성하고 C# 코드와 php 코드를 생성해서 사용하는 방식입니다.
 
-여러 플랫폼의 코드를 생성 해서 사용한다.
-
-예를들어 클라이언트로 유니티를 사용하고 서버로 php를 사용한다면
-
-IDL을 작성하고 C# 코드와 php 코드를 생성해서 사용하는 방식이다.
-
-간단하게 흐른 시간을 보내주는 SyncTime IDL 을 작성한후 php 코드를 생성해 보자.
+간단하게 흐른 시간을 보내주는 SyncTime IDL 을 작성한후 php 코드를 생성해 봅시다.
 
 protocol.fbs (IDL 파일)
 
@@ -124,11 +118,11 @@ table SyncTime {
 root_type MessageRoot;
 ```
 
-패킷 루트에 패킷타입과 버전을 붙인다. ( 물론 현재는 테스트이기 때문에 의미가 없다. )
+패킷 루트에 패킷타입과 버전을 붙입니다. ( 물론 현재는 테스트이기 때문에 의미는 없습니다. )
 
-바디에 SyncTime 패킷을 붙인다. SyncTime 패킷은 흐른 시간에 대한 정보만 넣었다.
+바디에 SyncTime 패킷을 붙이고 SyncTime 패킷은 흐른 시간에 대한 정보만 넣었습니다.
 
-플렛버퍼 바이너리 flatc 와 같은 경로에 protocol.fbs 파일을 넣는다
+플렛버퍼 바이너리 flatc 와 같은 경로에 protocol.fbs 파일을 넣습니다.
 
 ![flatbuffer_before screenshot]({{ site.url }}/assets/20170812/flatbuffer_before.png)
 
@@ -144,16 +138,16 @@ protocol 디렉토리 안을 보면
 
 ![generated_php_code screenshot]({{ site.url }}/assets/20170812/generated_php_code.png)
 
-다음과 같이 코드가 생성된것을 볼 수 있다.
+다음과 같이 코드가 생성된것을 볼 수 있습니다.
 
-이제 기존 서버 코드를 수정해 보자.
+이제 기존 서버 코드를 수정해 봅시다.
 
-생성된 디렉토리 ( protocol 디렉토리 ) 전체를 기존 server.php 디렉토리에 같이 넣는다.
+생성된 디렉토리 ( protocol 디렉토리 ) 전체를 기존 server.php 디렉토리에 같이 넣습니다.
 
 
 ![total_files screenshot]({{ site.url }}/assets/20170812/total_files.png)
 
-server.php 코드를 아래와 같이 수정해보자
+server.php 코드를 아래와 같이 수정해봅시다.
 
 ```
 <?php
@@ -209,23 +203,19 @@ function update()
 Worker::runAll();
 ```
 
-한서버에 모든 유져가 들어왔을경우 방이 100개 라고 가정하였다.
+한서버에 모든 유져가 들어왔을경우 방이 100개 라고 가정하였습니다.
 
-한방엔 최대 2명의 유져가 들어간다고 가정하였다.
+한방엔 최대 2명의 유져가 들어간다고 가정하였습니다.
 
-마찬 가지로 위에 작성한 코드를 아마존에서 프리티어로 주는 ec2 에 올린후
-
-CPU 사용량을 측정해 보았다.
+마찬 가지로 위에 작성한 코드를 아마존에서 프리티어로 주는 ec2 에 올린후 CPU 사용량을 측정해 보았습니다.
 
 ![flatbuffer_cpu_usage screenshot]({{ site.url }}/assets/20170812/flatbuffer_cpu_usage.png)
 
-7% 정도 사용하는 것을 볼 수 있다.
+7% 정도 사용하는 것을 볼 수 있습니다.
 
-단지 흐른시간 데이터를 보냈을 뿐인데 7% cpu 사용량을 보여주고 있다.
+단지 흐른시간 데이터를 보냈을 뿐인데 7% cpu 사용량을 보여주고 있습니다.
 
-생각한 것 보다는 꽤 많은 서버 리소스를 사용하고 있어서 사용을 하기 위해서는
-
-조금 더 R&D 를 해 봐야 할 것 같다.
+생각한 것 보다는 꽤 많은 서버 리소스를 사용하고 있어서 사용을 하기 위해서 조금 더 R&D 를 해 봐야 할 것 같습니다.
 
 
 

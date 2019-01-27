@@ -11,17 +11,11 @@ title: flatbuffer, protocolbuffer, messagepack 사용법
 [플랫버퍼](https://google.github.io/flatbuffers/),
 [메시지팩](https://msgpack.org/)
 
-을 php 에서 사용하기 위한 학습 테스트를
-
-아주 간단하게 만들어 봤습니다.
+을 php 에서 사용하기 위한 학습 테스트를 아주 간단하게 만들어 봤습니다.
 
 [이전 포스팅](https://battlecook.github.io/2017/08/12/flatbuffer-cpu-usage-issue.html)
 
-에서도 잠시 언급 했다 시피 플렛버퍼와 프로토콜버퍼는 멀티 플랫폼을 지원하는데
-
-IDL(Interface Description Language) 이라고 불리는 스키마를 작성해 두고
-
-여러 플랫폼의 코드를 생성 해서 사용합니다.
+에서도 잠시 언급 했다 시피 플렛버퍼와 프로토콜버퍼는 멀티 플랫폼을 지원하는데 IDL(Interface Description Language) 이라고 불리는 스키마를 작성해 두고 여러 플랫폼의 코드를 생성 해서 사용합니다.
 
 먼저 플랫버퍼 부터 살펴 봅시다.
 
@@ -95,13 +89,7 @@ class FlatBufferTest extends TestCase
 
 다음으로 프로토콜버퍼를 살펴 봅시다.
 
-내가 다운 받은 프로토콜 버퍼 버전은 3.5.1로
-
-https://github.com/google/protobuf/releases/tag/v3.5.1
-
-이 주소에서 아래
-
-protoc-3.5.1-win32.zip 파일을 다운 받아서 압축을 풀어서 사용하였습니다.
+내가 다운 받은 프로토콜 버퍼 버전은 3.5.1로 https://github.com/google/protobuf/releases/tag/v3.5.1 이 주소에서 아래 protoc-3.5.1-win32.zip 파일을 다운 받아서 압축을 풀어서 사용하였습니다.
 
 protocolbuffer IDL 파일을 작성합니다.
 
@@ -209,7 +197,6 @@ class MessagePackTest extends TestCase
 }
 
 ```
-
 
 3가지 직렬화 라이브러리 사용법을 알아보았습니다.
 

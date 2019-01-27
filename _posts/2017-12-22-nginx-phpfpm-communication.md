@@ -14,13 +14,13 @@ nginx 와 php 를 사용하는 경우
 
 ![nginx_php_fpm]({{ site.url }}/assets/20171222/nginx_php_fpm.png)
 
-와 같이 된다.
+와 같이 됩니다.
 
-FastCGI는 웹 서버와 프로그램이 상호작용(데이터를 주고 받기 위한) 인터페이스 개발을 위한 프로토콜이다.
+FastCGI는 웹 서버와 프로그램이 상호작용(데이터를 주고 받기 위한) 인터페이스 개발을 위한 프로토콜입니다.
 
-FastCGI는 CGI(Common Gateway Interface)를 개선한 인터페이스다.
+FastCGI는 CGI(Common Gateway Interface)를 개선한 인터페이스입니다.
 
-PHP 는 FastCgi 구현채인 php-fpm 을 사용해서 nginx 와 통신한다.
+PHP 는 FastCgi 구현채인 php-fpm 을 사용해서 nginx 와 통신합니다.
 
 php-fpm 설정 ( 기본경로 : /etc/php-fpm.d/www.conf )
 
@@ -28,10 +28,9 @@ php-fpm 설정 ( 기본경로 : /etc/php-fpm.d/www.conf )
 listen = 127.0.0.1:9000
 ```
 
-9000 번 포트로 tcp/ip socket 통신을 하는걸 알 수 있다.
+9000 번 포트로 tcp/ip socket 통신을 하는걸 알 수 있습니다.
 
-
-nginx 설정 에서 php-fpm 과 통신할 수 있도록 설정 해보자
+nginx 설정 에서 php-fpm 과 통신할 수 있도록 설정 해봅시다.
 
 nginx 설정 ( 기본경로 : /etc/nginx/nginx.conf )
 
@@ -49,14 +48,11 @@ server {
 }
 ```
 
-만일 nginx 와 php-fpm 이 물리적으로 동일한 서버에 있다면
+만일 nginx 와 php-fpm 이 물리적으로 동일한 서버에 있다면 unix socket 을 사용해서 속도를 향상 시킬 수 있습니다.
 
-unix socket 을 사용해서 속도를 향상 시킬 수 있다.
+(주의 : unix socket 은 프로세스간 통신 이기 때문에 물리적으로 다른 서버에 있다면 사용 할 수 없습니다.)
 
-(주의 : unix socket 은 프로세스간 통신 이기 때문에 물리적으로 다른 서버에 있다면 사용 할 수 없다.)
-
-다음과 같이 설정을 바꾼다.
-
+다음과 같이 설정을 바꿉니다.
 
 php-fpm 설정
 
@@ -74,13 +70,9 @@ fastcgi_pass   unix:/var/run/php7-fpm.sock;
 
 ![unixsocket_path]({{ site.url }}/assets/20171222/unixsocket_path.png)
 
-설정한 경로에 파일이 생김을 알 수 있습니다. 
+설정한 경로에 파일이 생김을 알 수 있습니다. (리눅스는 소켓을 파일 취급 합니다.)
 
-(리눅스는 소켓을 파일 취급 합니다.)
-
-nginx 와 php-fpm 소켓통신의 경우 접근이 잦기 때문에
-
-/dev/shm 경로 아래에 넣어주면 약간의 속도 향상 효과를 얻을 수 있습니다.
+nginx 와 php-fpm 소켓통신의 경우 접근이 잦기 때문에 /dev/shm 경로 아래에 넣어주면 약간의 속도 향상 효과를 얻을 수 있습니다.
 
 /dev/shm 은 실제로 메모리를 점유하는건 아니지만 사용하는 만큼 램을 사용하는데
 
@@ -170,11 +162,7 @@ print_r($end - $start);
 
 2) 
 
-또다른 팀 동료는 tcp/ip socket 대신 unix socket 사용하는 이유는 
-
-tcp/ip socket 은 close 시에 프로세스가 time wait 가 걸려서 바로 반환 하지 않기 때문에
-
-소켓 개수 제한에 금방 걸릴수 있어서 unix socket 으로 대체 한다고 말해 줬다. 
+또다른 팀 동료는 tcp/ip socket 대신 unix socket 사용하는 이유는 tcp/ip socket 은 close 시에 프로세스가 time wait 가 걸려서 바로 반환 하지 않기 때문에 소켓 개수 제한에 금방 걸릴수 있어서 unix socket 으로 대체 한다고 말해 줬다. 
 
 관련 내용은 다시 찾아봐야 할 거 같습니다.
 

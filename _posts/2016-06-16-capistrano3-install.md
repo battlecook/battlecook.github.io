@@ -114,19 +114,9 @@ sudo stderr: sudo: sorry, you must have a tty to run sudo
 
 이런에러가 발생할수 있습니다.
 
-Gemfile 에
+Gemfile 에 gem "sshkit-sudo" 이걸 추가하고 bundle 명령어를 치고 ( 혹은 gem install sshkit-sudo 를 쳐서 설치합니다. )
 
-gem "sshkit-sudo"
-
-이걸 추가하고
-
-bundle 명령어를 치고 ( 혹은 gem install sshkit-sudo 를 쳐서 설치합니다. )
-
-execute! :sudo, "service php-fpm reload"
-
-로 수정 후 Capfile 에
-
-require "sshkit/sudo" 추가해서 사용하면 됩니다.
+execute! :sudo, "service php-fpm reload" 로 수정 후 Capfile 에 require "sshkit/sudo" 추가해서 사용하면 됩니다.
 
 <br/><br/>
 

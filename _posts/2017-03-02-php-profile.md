@@ -3,9 +3,7 @@ layout: post
 title: php profile
 ---
 
-php 코드 성능 테스트를 위해
-
-xhprof 를 사용중이 였습니다.
+php 코드 성능 테스트를 위해 xhprof 를 사용중이 였습니다.
  
  <a href = "https://github.com/phacility/xhprof">xhprof</a> 
  
