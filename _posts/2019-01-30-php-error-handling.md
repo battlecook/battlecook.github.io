@@ -5,7 +5,7 @@ title:  php warning 및 fatal error 핸들링
 
 php 로 코드를 작성하다보면 warning 에러와 fatal 에러를 핸들링 하고싶은 경우가 있습니다.
 
-저의경우는 warning 에러와 fatal 에러가 난 경우에 에러를 잡기 위해서 db 등에 적거나 알림을 받거나 등의 작업을 하기 위함 이였습니다.
+저의 경우는 warning 에러와 fatal 에러가 난 경우에 에러를 잡기 위해서 db 등에 적거나 알림을 받거나 등의 작업을 하기 위함 이였습니다.
 
 사용법을 알아 보도록 하겠습니다.
 
@@ -53,9 +53,9 @@ register_shutdown_function
 
 위의 함수는 정확히 fatal 에러를 잡기 위함은 아니고 스크립트가 완료됐거나 exit() 함수 사용시에 호출 됩니다.
 
-하지만 fatal 에러가 발생시에 등록한 콜백함수에서 잡을 수 있기때문에 사용할 수 있습니다.
+하지만 fatal 에러가 발생시에 등록한 콜백함수에서 잡을 수 있기때문에 fatal 에러를 잡기 위해서도 사용할 수 있습니다.
 
-저의 경우는 register_shutdown_function 에 콜백함수를 등록할때 error_get_last() 함수와 debug_backtrace() 함수를 사용하였습니다.
+저의 경우는 register_shutdown_function 에 콜백함수를 등록할때 error_get_last() 함수와 debug_backtrace() 함수를 함께 사용하였습니다.
 
 간단한 예제 코드 입니다.
 
