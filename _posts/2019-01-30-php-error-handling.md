@@ -77,3 +77,46 @@ function shutdown()
     }
 }
 ```
+
+한가지 알아 둬야 할 점은 register_shutdown_function 함수의 순서 종속성 입니다.
+
+공식문서의 내용은 아래와 같습니다.
+
+```
+Multiple calls to register_shutdown_function() can be made, and each will be called in the same order as they were registered. 
+If you call exit() within one registered shutdown function, processing will stop completely and no other registered shutdown functions will be called.
+```
+
+만약 register_shutdown_function 함수를 여러번 등록 하게 된다면 등록된 순서대로 호출 된다는 내용입니다.
+
+
+```php
+<?php
+
+register_shutdown_function('shutdown3');
+register_shutdown_function('shutdown2');
+register_shutdown_function('shutdown1');
+
+function shutdown1()
+{
+    echo "shutdown1 function" . PHP_EOL;
+}
+
+function shutdown2()
+{
+    echo "shutdown2 function" . PHP_EOL;
+}
+
+function shutdown3()
+{
+    echo "shutdown3 function" . PHP_EOL;
+}
+```
+
+결과
+
+```
+shutdown3 function
+shutdown2 function
+shutdown1 function
+```
