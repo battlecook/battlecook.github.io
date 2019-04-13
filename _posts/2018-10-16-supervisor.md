@@ -109,3 +109,11 @@ systemctl restart supervisor
  
 
 # 슈퍼바이저 명령어 
+
+supervisorctl reread
+supervisorctl update
+
+참고 사이트 
+
+
+https://medium.com/@duffn/supervisor-reread-and-update-283207801e84
