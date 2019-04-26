@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  php 개발시 현재 실행되고 있는 환경 체크 
+comments: true
 ---
 
 php 로 프로그래밍을 할때 실행되는 프로그램이 동작하는 환경을 체크하고 싶을때가 있습니다.
