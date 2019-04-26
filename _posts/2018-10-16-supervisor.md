@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  supervisor 사용
+comments: true
 ---
 
 어플리케이션을 개발하고 배포시에 데몬이 어떤 이유로 죽은 경우 바로 되살려서 데몬이 떠있는 걸 유지하고 싶은 경우가 있습니다. 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: flatbuffer, protocolbuffer, messagepack 사용법
+comments: true
 ---
 
 나의 경우에 외부 라이브러리 사용법을 익힐때 테스트 케이스를 작성해서 사용법을 익힙니다.

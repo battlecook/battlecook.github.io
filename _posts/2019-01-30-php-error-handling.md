@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  php warning 및 fatal error 핸들링
+comments: true
 ---
 
 php 로 코드를 작성하다보면 warning 에러와 fatal 에러를 핸들링 하고싶은 경우가 있습니다.
