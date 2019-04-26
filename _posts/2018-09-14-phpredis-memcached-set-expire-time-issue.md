@@ -1,6 +1,7 @@
 ---
 layout: post
 title: phpredis set 함수 timeout 인자 사용
+comments: true
 ---
 
 익스텐션 라이브러리 redis 를 래핑한 함수로 사용중에 set 함수를 사용할 일이 있었습니다.

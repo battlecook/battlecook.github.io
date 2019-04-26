@@ -1,6 +1,7 @@
 ---
 layout: post
 title: google flatbuffer 의 cpu 사용량 이슈 
+comments: true
 ---
 
 php 소켓 서버로 사용한 라이브러리 : <a href = "https://github.com/walkor/Workerman"> Workerman </a>

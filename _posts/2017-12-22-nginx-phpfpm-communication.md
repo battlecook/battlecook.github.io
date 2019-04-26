@@ -1,6 +1,7 @@
 ---
 layout: post
 title: nginx, php-fpm 간 통신
+comments: true
 ---
 
 기본적으로 웹서버 구조는

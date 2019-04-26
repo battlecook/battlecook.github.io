@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  php exception 시 error trace 의 변수
+comments: true
 ---
 
 php 에서 Exception 이 떨어져서 Exception 객체의 getTrace 함수 사용시 변수 값이 생각 했던 것과 달랐습니다.
