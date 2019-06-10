@@ -202,3 +202,19 @@ class MessagePackTest extends TestCase
 3가지 직렬화 라이브러리 사용법을 알아보았습니다.
 
 시간이 될 때 3가지 직렬화 라이브러리를 php 에서 사용시에 성능에 대한 테스트를 해봐야 겠습니다.
+
+
++ 2019-06-10 추가 내용
+
+프로토콜 버퍼를 프로토콜버퍼 v3.8.0 에서 go 언어로 뽑을때 뽑히지 않는 이슈가 있었습니다.
+```
+protoc-gen-go: program not found or is not executable
+--go_out: protoc-gen-go: Plugin failed with status code 1.
+```
+라는 이슈가 있었습니다. 아래 명령어로 protoc-gen-go 를 설치해 주면 해결 됩니다.
+
+```
+go get -u github.com/golang/protobuf/protoc-gen-go
+```
+
+
