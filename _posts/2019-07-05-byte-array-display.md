@@ -56,9 +56,14 @@ public void TestByteArrayDisplay()
 
 go 언어 기준으로 10진수로 바꿔서 프린트 해 보겠습니다.
 
+
+go 언어 프린트
+
 ```golang
 fmt.Println([]byte("test"))
 ```
+
+c# 언어 프린트
 
 ```csharp
 private void displayDecimalByteArray(string str)
