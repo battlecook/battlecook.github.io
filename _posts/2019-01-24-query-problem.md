@@ -57,4 +57,4 @@ ON friend.USER_ID = friend_count.USER_ID AND friend.REAL_FAN_COUNT != friend_cou
 
 #### 참고 사이트
 
-https://stackoverflow.com/questions/9390679/left-join-after-group-by
+[https://stackoverflow.com/questions/9390679/left-join-after-group-by](https://stackoverflow.com/questions/9390679/left-join-after-group-by)

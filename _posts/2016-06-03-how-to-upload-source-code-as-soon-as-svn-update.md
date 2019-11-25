@@ -23,4 +23,4 @@ Tools -> deployment -> options 에 ‘Upload external changes’를 선택하면
 
 관련 링크
 
-http://stackoverflow.com/questions/21257966/phpstorm-automatically-upload-to-default-server-after-update-from-svn
+[http://stackoverflow.com/questions/21257966/phpstorm-automatically-upload-to-default-server-after-update-from-svn](http://stackoverflow.com/questions/21257966/phpstorm-automatically-upload-to-default-server-after-update-from-svn)

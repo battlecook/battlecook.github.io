@@ -41,6 +41,6 @@ bootstrap="실행시킬 파일( ex) db_init.php )"  를 넣으면 됩니다.
 
 관련 링크
 
-http://stackoverflow.com/questions/8085641/with-phpunit-how-does-one-run-initialization-code-before-any-tests-are-run
+[http://stackoverflow.com/questions/8085641/with-phpunit-how-does-one-run-initialization-code-before-any-tests-are-run](http://stackoverflow.com/questions/8085641/with-phpunit-how-does-one-run-initialization-code-before-any-tests-are-run)
 
-https://phpunit.de/manual/5.1/en/textui.html
+[https://phpunit.de/manual/5.1/en/textui.html](https://phpunit.de/manual/5.1/en/textui.html)
