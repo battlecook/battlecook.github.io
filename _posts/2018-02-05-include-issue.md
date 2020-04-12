@@ -1,6 +1,7 @@
 ---
 layout: post
 title: include 함수 사용시 ./ 경로 이슈
+comments: true
 ---
 
 최근 들어서 composer autoloader 를 쓰고 있어서 파일을 직접 include 할일이 잘 없었습니다.

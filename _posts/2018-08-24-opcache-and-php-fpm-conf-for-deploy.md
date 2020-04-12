@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 배포를 위한 php-fpm 및 opcache 설정
+comments: true
 ---
 
 php-fpm 을 사용해서 개발시 배포시에 주의할 점이 한가지 있습니다. 
