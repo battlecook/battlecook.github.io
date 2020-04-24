@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  flutter, onPress 콜백에서 TextEditingController 의 clear 함수 사용시 에러 해결
+title:  flutter, onPress 콜백에서 TextEditingController 의 clear 사용시 에러 해결
 comments: true
 ---
 
@@ -90,7 +90,7 @@ Recognizer: _TransparentTapGestureRecognizer#d8176
 ════════════════════════════════════════════════════════════════════════════════════════════════════
 ```
 
-해결 방법은 onPress 콜백 코드를 다음과 같이 고치는 것입니다.
+해결 방법은 onPress 콜백 코드를 다음과 같이 고치는 것 입니다.
 
 기존 코드
 
@@ -103,7 +103,7 @@ Recognizer: _TransparentTapGestureRecognizer#d8176
             ),
 ```
 
-기존 코드
+수정 코드
 
 ```
             suffixIcon: IconButton(
