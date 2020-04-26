@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Phpstorm 재시작시 Php language level 세팅 리셋 이슈
+title: Phpstorm 재시작시 php language level 세팅 리셋 이슈
 ---
 
 개발 중 php7.1 에서 추가된 기능 사용시 phpstorm 에서 문법 에러를 내고 있었습니다.
