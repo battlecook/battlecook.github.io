@@ -7,15 +7,15 @@ comments: true
 
 **평균**
 
- ![mean]({{ site.url }}/assets/20201106/mean.png)
+![mean]({{ site.url }}/assets/20201106/mean.png)
  
- **분산**
+**분산**
  
- ![mean]({{ site.url }}/assets/20201106/variance.png)
+![mean]({{ site.url }}/assets/20201106/variance.png)
  
- **표준편차**
+**표준편차**
  
- ![mean]({{ site.url }}/assets/20201106/standard_deviation.png)
+![mean]({{ site.url }}/assets/20201106/standard_deviation.png)
 
 
 **해석**
@@ -40,6 +40,9 @@ B의 표준편차가 훨씬 낮다.
 
 라고 해석 할 수 있다.
 
-#### 출처
+
+
+
+#### 참고 사이트
 
 [https://www.mathsisfun.com/data/standard-deviation.html](https://www.mathsisfun.com/data/standard-deviation.html)
