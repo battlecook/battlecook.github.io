@@ -8,13 +8,13 @@ comments: true
 
 우리말로 emit 은 "방출하다" 로 번역할 수 있습니다.
 
-컴퓨터사이언스에서 해당 용어에 대해 물어보는 스택오버플로 질문도 존재합니다.
+스택오버플에 emit을 컴퓨터 사이언스에서 일반적으로 어떻게 해석하는지에 대한 질문도 존재합니다.
 
 [https://stackoverflow.com/questions/31270657/what-does-emit-mean-in-general-computer-science-terms](https://stackoverflow.com/questions/31270657/what-does-emit-mean-in-general-computer-science-terms)
 
 emit() 는 보통 등록된 이벤트들을 실행시키는 함수 라고 생각하면 됩니다.
 
-**등록한 이벤트를 방출한다.** 로 이해하면 될듯 합니다.
+( **등록한 이벤트를 방출한다.** 로 이해하면 될듯 합니다. )
 
 emit 을 구현한 코드들도 많이 있는데 php 로 구현된 EventEmitter를 보도록 합시다.
 
