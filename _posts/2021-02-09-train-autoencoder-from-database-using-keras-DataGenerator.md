@@ -4,9 +4,6 @@ title:  keras DataGenerator 를 이용해 db에 있는 데이터로 학습하는
 comments: true
 ---
 
-flutter 에서 foundation 라이브러리의 Key 클레스 global Key, Local Key, Value Key 등의 추상 클레스 입니다.
-
-가끔 추상화된 Key 클레스를 리턴받아서 인자로 넣어줬던 value 값을 쓰고 싶은경우가 있습니다.
 keras 의 DataGenerator 는 학습데이터가 메모리보다 훨씬 많은경우에 효율적으로 학습을 시켜줄 수 있도록 합니다.
 
 keras.utils.Sequence 를 상속받아
