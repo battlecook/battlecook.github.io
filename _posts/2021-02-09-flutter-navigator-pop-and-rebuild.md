@@ -180,7 +180,7 @@ Navigator.of(context).push(
 
 StatefulWidget 이라면 setState(() {}); 작성해주고 StatelessWidget 이라면 Stream 을 이용해서 rebuild를 시켜주면 된다.
 
-StatelessWidget 에서 예제 코드는 다음과 같다.
+StatelessWidget 에서 전체 코드는 다음과 같다.
 
 ```dart
 import 'package:flutter/material.dart';
