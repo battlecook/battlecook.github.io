@@ -155,7 +155,7 @@ class SqlDataGenerator(keras.utils.Sequence):
 
 참고로 `__getitem__` 함수의 index 값을 프린트 해보면 순차적으로 찍히지 않는데 keras 라이브러리가 데이터를 로드하는데 비동기로 처리를 하기 때문입니다.
 
-(keras-team 깃헙이슈에 아래오 같은 댓글이 있습니다.)
+( keras-team 깃헙이슈에 아래와 같은 댓글이 있습니다. )
 ```
 And yes, keras uses multithreading and multiprocessing to load the data faster and it also confuses users because it's asynchronous but it's perfectly normal.
 ```
