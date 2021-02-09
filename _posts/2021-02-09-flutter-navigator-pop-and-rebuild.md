@@ -168,13 +168,14 @@ void main() {
 해결방법은 첫 번째 페이지에서 push 로 페이지를 라우트 할때 then 으로 돌아왔을때의 이벤트를 작성해 주면 된다.
 
 ```dart
-								Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => RemoveTextButtonWidget(),
-                    ),
-                  ).then((value) {
-											// pop 으로 돌아왔을 때 event 작성
-                  });
+Navigator.of(context).push(
+        MaterialPageRoute(
+            builder: (BuildContext context) => RemoveTextButtonWidget(),
+        ),
+    ).then((value) {
+        // pop 으로 돌아왔을 때 event 작성
+    }
+);
 ```
 
 StatefulWidget 이라면 setState(() {}); 작성해주고 StatelessWidget 이라면 Stream 을 이용해서 rebuild를 시켜주면 된다.
