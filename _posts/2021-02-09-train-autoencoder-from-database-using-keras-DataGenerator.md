@@ -223,7 +223,6 @@ class SqlDataGenerator(keras.utils.Sequence):
         return int(np.floor(len(self.user_ids) / self.batch_size))
 
     def __getitem__(self, index):
-        print(index)
         indexes = self.indexes[index * self.batch_size:(index + 1) * self.batch_size]
         batch_user_ids = [self.user_ids[k] for k in indexes]
 
