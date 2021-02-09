@@ -34,7 +34,7 @@ keras.utils.Sequence 를 상속받아
 
 ```
   
-	    [ 1  0  17  0 ]             [ 0 0 0 0 ]  
+        [ 1  0  17  0 ]             [ 0 0 0 0 ]  
 user1 = [ 0  3   0  0 ]     user2 = [ 0 5 0 0 ] 
         [ 0  0  -1  0 ]             [ 2 0 9 0 ] 
         [ 0  0   0  0 ]             [ 0 0 0 0 ]
@@ -155,7 +155,9 @@ class SqlDataGenerator(keras.utils.Sequence):
 
 참고로 __getitem__ 함수의 index 값을 프린트 해보면 순차적으로 찍히지 않는데 keras 라이브러리가 데이터를 로드하는데 비동기로 처리를 하기 때문입니다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/134d4d53-978a-4a7a-8014-254a61ee35f0/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/134d4d53-978a-4a7a-8014-254a61ee35f0/Untitled.png)
+```
+And yes, keras uses multithreading and multiprocessing to load the data faster and it also confuses users because it's asynchronous but it's perfectly normal.
+```
 
 [https://github.com/keras-team/keras/issues/12082](https://github.com/keras-team/keras/issues/12082)
 
