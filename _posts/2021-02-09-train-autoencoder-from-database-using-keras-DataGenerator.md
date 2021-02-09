@@ -19,10 +19,10 @@ keras.utils.Sequence 를 상속받아
 
 검색을 해보면 대부분 이미지 파일을 읽어와서 처리하는 예제가 많아 데이터베이스에서 데이터를 가져와 학습시키는 예제를 작성해 보겠습니다.
 
-- __init__ : 생성자 입니다. 객체 생성시 호출됩니다.
+- \__init\__ : 생성자 입니다. 객체 생성시 호출됩니다.
 - on_epoch_end : 한 epoch 가 수행 된 후 호출됩니다.
-- __len__ :  배치의 개수를 반환합니다. 예를 들어 전체데이터가 100개 이고 batch 사이즈가 20이라면 5를 반환합니다.
-- __getitem__ : 인자로 넘겨주는 index 값에 해당하는 배치의 데이터를 반환합니다.
+- \__len\__ :  배치의 개수를 반환합니다. 예를 들어 전체데이터가 100개 이고 batch 사이즈가 20이라면 5를 반환합니다.
+- \__getitem\__ : 인자로 넘겨주는 index 값에 해당하는 배치의 데이터를 반환합니다.
 
 유져당 4 x 4 행렬의 데이터를 오토인코더로 학습시킨다고 가정해 봅시다. 데이터베이스에는 user_id, x, y value 의 컬럼을 갖습니다.
 
@@ -153,7 +153,7 @@ class SqlDataGenerator(keras.utils.Sequence):
         self.indexes = np.arange(len(self.user_ids))
 ```
 
-참고로 __getitem__ 함수의 index 값을 프린트 해보면 순차적으로 찍히지 않는데 keras 라이브러리가 데이터를 로드하는데 비동기로 처리를 하기 때문입니다.
+참고로 `__getitem__` 함수의 index 값을 프린트 해보면 순차적으로 찍히지 않는데 keras 라이브러리가 데이터를 로드하는데 비동기로 처리를 하기 때문입니다.
 
 ```
 And yes, keras uses multithreading and multiprocessing to load the data faster and it also confuses users because it's asynchronous but it's perfectly normal.
