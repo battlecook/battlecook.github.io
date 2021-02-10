@@ -48,7 +48,7 @@ similarity between two vectors is defined as follows:
 이렇게 해서 구한 단위시간당 코사인 유사도 값들을 가지고 자기유사도 ( self-similarity ) 를 구 할 수 있습니다. 자기유사도의 공식은 다음과 같습니다.
 
 ```
-**H = 1 - 0.5 * σ**
+H = 1 - 0.5 * σ
 
 H : 자기유사도 ( self-similarity)
 σ : 코사인유사도들의 표준편차 값
