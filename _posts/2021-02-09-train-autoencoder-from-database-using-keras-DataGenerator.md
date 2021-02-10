@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  keras DataGenerator 를 이용해 db에 있는 데이터로 학습하는 방법
+title:  keras, DataGenerator 를 이용해 db에 있는 데이터로 학습하는 방법
 comments: true
 ---
 
