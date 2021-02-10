@@ -80,6 +80,8 @@ H : 자기유사도 ( self-similarity)
 
 self-similarity 는 0.9933608 이 됩니다.
 
+<br>
+
 **자기유사도(self-similarity) 외에 어뷰져들의 특징**
 
 논문을 보면 self-similarity 외에도 어뷰져를 특징이 나와있는데 간략히 소개해 보도록 하겠습니다.
@@ -120,7 +122,11 @@ total log count
 
 9 ( 호출 횟수 1, 2 ,3, 3 의 합 )
 
+<br>
+
 **논문을 읽으면서 의문사항**
+
+<br>
 
 **1) 코사인유사도 의문**
 
@@ -138,6 +144,8 @@ total log count
 
 벡터간의 유사도를 표현하는 방법엔 여러가지가 있는데  [https://bab2min.tistory.com/566](https://bab2min.tistory.com/566) 해당 블로그에 자세히 설명되어 있습니다.
 
+<br>
+
 **2) 유져가 플레이하지 않고 있는 경우에 코사인 유사도값에 대한 처리**
 
 유져가 플레이하지 않는 경우의 코사인 유사도에 대한 처리방법도 몇 가지가 있을 수 있습니다.
@@ -147,6 +155,8 @@ total log count
 스택오버플로에 모든 원소를 0 으로로 넣었을때에 대한 질문도 있습니다.
 
 [https://stackoverflow.com/questions/26699659/cosine-similarity-when-one-of-vectors-is-all-zeros](https://stackoverflow.com/questions/26699659/cosine-similarity-when-one-of-vectors-is-all-zeros)
+
+<br>
 
 **참고한 문서**
 
