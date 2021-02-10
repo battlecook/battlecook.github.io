@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "You are a game bot" 논문의 자기 유사도 (self-similarity) 설명
+title:  You are a game bot 논문의 자기 유사도 (self-similarity) 설명
 comments: true
 ---
 
