@@ -14,7 +14,7 @@ NC 소프트에서 발표한 You are a game bot 논문 입니다.
 
 [https://www.koreascience.or.kr/article/JAKO201609562997970.pdf](https://www.koreascience.or.kr/article/JAKO201609562997970.pdf)
 
-해당 논문은 NC 소프트가 리니지, 아이온, 블레이드 소울의 로그를 분석하여 어뷰져 들의 공통 특성을 찾아낸 것입니다. 여러 내용들이 있지만 그중에서 self-similarity ( 자기 유사도 ) 에 대해서 알아 보도록 하겠습니다.
+해당 논문은 NC 소프트가 리니지, 아이온, 블레이드 소울의 로그를 분석하여 어뷰져 들의 공통 특성을 찾아낸 것입니다. 여러 내용들이 있지만 그중에서 자기유사도 ( self-similarity ) 에 대해서 알아 보도록 하겠습니다.
 
 논문내용을 보면 1) 단위시간당 유져들의 엑션을 벡터로 만들고 2) 그 벡터와 모든 원소가 1인 벡터의 코사인유사도 ( cosine similarity ) 를 구한 후, 3) 그 코사인유사도를 가지고 자기유사도 ( self-similarity ) 를 구하면 됩니다.
 
@@ -26,7 +26,7 @@ NC 소프트에서 발표한 You are a game bot 논문 입니다.
 
 ![gamelogs-to-vector]({{ site.url }}/assets/20210210/gamelogs_to_vector.png)
 
-단위시간은 1분으로 잡았고, event_id 는 유져들의 행동 들로 보입니다. 예를들어 몬스터공격, 상점구매 등으로 보면 될거 같습니다. 단위시간당 event_id 가 발생한 횟수로 행렬을 만듭니다.
+단위시간은 1분으로 잡았고, Event id 는 유져들의 행동 입니다. 예를들어 몬스터공격, 상점구매 등으로 보면 됩니다. 단위시간당 Event id 가 발생한 횟수로 행렬을 만듭니다.
 
 두번째는 코사인유사도 입니다. 코사인 유사도는 다음의 식으로 구할 수 있습니다.
 
@@ -50,7 +50,7 @@ similarity between two vectors is defined as follows:
 ```
 H = 1 - 0.5 * σ
 
-H : 자기유사도 ( self-similarity)
+H : 자기유사도 ( self-similarity )
 σ : 코사인유사도들의 표준편차 값
 ```
 
@@ -58,7 +58,7 @@ H : 자기유사도 ( self-similarity)
 
 ![comparison_between_bots_and_normal_users]({{ site.url }}/assets/20210210/comparison_between_bots_and_normal_users.png)
 
-간단한 예시를 들어가면서 self-similarity 를 구해 보도록 하겠습니다.
+간단한 예시를 들어가면서 자기유사도 ( self-similarity ) 를 구해 보도록 하겠습니다.
 
 유져 A 가 event 2개 몬스터공격,  아이템사용 를 하는경우를 가정하겠습니다.
 
@@ -78,7 +78,7 @@ H : 자기유사도 ( self-similarity)
 
 0.970142, 0.948683, 0.980580 값의 표준편차는 약 0.0132784
 
-self-similarity 는 0.9933608 이 됩니다.
+자기유사도(self-similarity) 는 0.9933608 이 됩니다.
 
 <br>
 
@@ -90,13 +90,13 @@ self-similarity 는 0.9933608 이 됩니다.
 
 event 종류는 3개,단위시간은 4개를 가진다고 가정
 
-단위시간 1 : [1, 2, 0] 코사인 sim : 0.77
+단위시간 1 : [1, 2, 0] 코사인 유사도 : 0.77
 
-단위시간 2 : [0, 0, 0] 코사인 sim : 0
+단위시간 2 : [0, 0, 0] 코사인 유사도 : 0
 
-단위시간 3 : [3, 0, 0] 코사인 sim : 0.57
+단위시간 3 : [3, 0, 0] 코사인 유사도 : 0.57
 
-단위시간 4 : [3, 0, 0] 코사인 sim : 0.57
+단위시간 4 : [3, 0, 0] 코사인 유사도 : 0.57
 
 self similarity
 
