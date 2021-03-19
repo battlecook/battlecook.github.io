@@ -13,7 +13,9 @@ sudo apt-get install redis-server
 redis-cli -v
 ```
 
-3대의 레디스에 대한 config 파일을 각각 만들어 준다.
+3대의 레디스에 대한 config 파일을 각각 만들어 줍니다.
+
+레디스를 설치하면 기본적으로 /etc/redis/ 경로에 redis.conf 가 생성이 됩니다.
 
 ```
 sudo cp /etc/redis/redis.conf /etc/redis/redis1.conf
@@ -23,8 +25,15 @@ sudo cp /etc/redis/redis.conf /etc/redis/redis3.conf
 
 redis.conf 파일을 개별로 만들어준 후
 
-cluster-enabled 설정값을 yes 로 변경
-cluster-config-file 값은 redis1.conf, redis2.conf, redis3.conf 에서 각각 다르게 설정한다.
+cluster-enabled 설정값을 yes 로 변경 합니다. ( 주석 해제 )
+cluster-config-file 값은 redis1.conf, redis2.conf, redis3.conf 에서 각각 다르게 설정합니다.
+cluster-config-file 값이 동일하면 아래와 같은 에러가 발생합니다.
+
+```
+Sorry, the cluster configuration file nodes.conf is already used by a different Redis Cluster node. Please make sure that different nodes use different cluster configuration files.
+```
+
+다음과 같이 3개의 레디스 설정값을 따로 만들어 줍니다.
 
 redis1.conf
 
@@ -92,7 +101,7 @@ M: 3471493cf7efad886642022cfce1867006eee48a 127.0.0.1:7002
 [OK] All nodes agree about slots configuration.
 ```
 
-레디스 클러스터 golang 예제 코드
+레디스 클러스터 테스트 golang 예제 코드
 
 ```go
 package main
