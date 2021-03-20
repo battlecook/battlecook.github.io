@@ -101,6 +101,46 @@ M: 3471493cf7efad886642022cfce1867006eee48a 127.0.0.1:7002
 [OK] All nodes agree about slots configuration.
 ```
 
+클러스터 된 노드에 접속하기
+
+```
+redis-cli -c -p 7001
+127.0.0.1:7001> cluster nodes
+```
+
+클러스터 정보 확인
+
+```
+127.0.0.1:7001> cluster info
+cluster_state:ok
+cluster_slots_assigned:16384
+cluster_slots_ok:16384
+cluster_slots_pfail:0
+cluster_slots_fail:0
+cluster_known_nodes:3
+cluster_size:3
+cluster_current_epoch:3
+cluster_my_epoch:1
+cluster_stats_messages_ping_sent:70
+cluster_stats_messages_pong_sent:71
+cluster_stats_messages_sent:141
+cluster_stats_messages_ping_received:69
+cluster_stats_messages_pong_received:70
+cluster_stats_messages_meet_received:2
+cluster_stats_messages_received:141
+```
+
+클러스터 노드 정보 확인
+
+```
+127.0.0.1:7001> cluster nodes
+4aa9cfff772153b66d98fad2f86b3a04b0f6d9b1 127.0.0.1:7003@17003 master - 0 1616207961542 3 connected 10923-16383
+54a7fb2f8614dd71eb1e5831ad6de815f257769f 127.0.0.1:7002@17002 master - 0 1616207962547 2 connected 5461-10922
+95e280be7cb511ec6b06d8d4529c9d62c9dccba6 127.0.0.1:7001@17001 myself,master - 0 1616207959000 1 connected 0-5460
+```
+
+
+
 레디스 클러스터 테스트 golang 예제 코드
 
 ```go
