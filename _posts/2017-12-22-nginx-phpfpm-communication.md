@@ -9,7 +9,7 @@ comments: true
 
 ![webserver_cgi]({{ site.url }}/assets/20171222/webserver_cgi.png)
 
-와 같다.
+와 같습니다.
 
 nginx 와 php 를 사용하는 경우
 
