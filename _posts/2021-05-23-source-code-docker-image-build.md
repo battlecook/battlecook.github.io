@@ -232,7 +232,7 @@ $ docker build --build-arg USER="저장소 아이디" --build-arg PASSWORD="저�
  => CACHED [2/5] WORKDIR /go/src/app
  => [3/5] RUN git clone https://아이디:비번@github.com/battlecook/프로그램.git
  => CACHED [4/5] WORKDIR /go/src/app/프로그램/
- => **CACHED** [5/5] RUN go build -o simple_web_server
+ => CACHED [5/5] RUN go build -o simple_web_server  <<<<<< 해당 라인이 CACHED 됨을 알 수 있음
  => exporting to image
  => => exporting layers
  => => writing image sha256:a12721d7905f7ff73a6efeb945a2cfc7dd8117ddade57786a0b32ba09cf01de3
@@ -267,8 +267,8 @@ $ docker build --build-arg USER="저장소 아이디" --build-arg PASSWORD="저�
  => [1/5] FROM docker.io/library/golang:latest@sha256:6f0b0a314b158ff6caf8f12d7f6f3a966500ec6afb533e986eca7375e2f7560f
  => CACHED [2/5] WORKDIR /go/src/app
  => [3/5] RUN git clone https://아이디:비번@github.com/battlecook/프로그램.git
- => **[4/5] WORKDIR /go/src/app/프로그램/**
- => **[5/5] RUN go build -o simple_web_server**
+ => [4/5] WORKDIR /go/src/app/프로그램/
+ => [5/5] RUN go build -o simple_web_server <<<<<< 해당 라인이 CACHE 된 걸 사용하지 않음
  => exporting to image
  => => exporting layers
  => => writing image sha256:36be0be7d2373152463a222cc2c035ae70077443ed77060d0835d6ee948eb68a
