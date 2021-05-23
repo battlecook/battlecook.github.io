@@ -7,11 +7,13 @@ comments: true
 **TL;DR ( Too Long, Didn't Read )**
 
 ```
-프로그램을 Dockerfile 로 빌드시, 소스코드를 COPY 한 경우는 소스코드를 항상 빌드 해서 변경사항을 바로 적용 할 수 있다. 
+프로그램을 Dockerfile 로 빌드시 
 
-하지만 REPO 에서 소스코드를 클론 받아서 빌드하는 경우는 클론하는 부분이 CACHED 되기 때문에 바로 적용이 되지 않는다. 
+소스코드를 COPY 한 경우는 소스코드를 항상 빌드 해서 변경사항을 바로 적용 할 수 있습니다. 
 
-도커 빌드시 —no-cache 옵션을 줘서 해결 할 수 있다.
+하지만 REPO 에서 소스코드를 클론 받아서 빌드하는 경우는 클론하는 부분이 CACHED 되기 때문에 바로 적용이 되지 않습니다.
+
+도커 빌드시 —no-cache 옵션을 줘서 해결 할 수 있습니다.
 ```
 
 
@@ -38,7 +40,7 @@ func main() {
 1. 소스코드에 Dockerfile 을 넣고 현재 디렉토리를 COPY 명령어를 이용해 복사 후 빌드
 2. Dockerfile 에 저장소의 코드를 clone 후 빌드
 
-두 가지 경우를 도커파일로 빌드해 이미지를 만들어 보겠습니다.
+두 가지 경우를 도커파일로 빌드해 이미지를 만들어 보겠습니다. <br>
 
 **1. 소스코드에 Dockerfile 을 넣고 현재 디렉토리를 COPY 명령어를 이용해 복사 후 빌드**
 
@@ -93,7 +95,7 @@ $ docker build -t simple_web_server .
 ```docker
 $ docker images;
 REPOSITORY                 TAG              IMAGE ID           CREATED          SIZE
-simple_web_server          latest           **8f825582151f**   45 seconds ago   868MB
+simple_web_server          latest           8f825582151f   45 seconds ago   868MB
 ```
 
 생성된 이미지를 컨테이너로 실행하고 동작을 확인합니다.
@@ -146,7 +148,7 @@ $ docker build -t simple_web_server .
 ```docker
 $ docker images;
 REPOSITORY                 TAG              IMAGE ID           CREATED          SIZE
-simple_web_server          latest           **80daeb738daf**   38 seconds ago   868MB
+simple_web_server          latest           80daeb738daf   38 seconds ago   868MB
 ```
 
 잘 적용된 것을 확인 할 수 있습니다.
