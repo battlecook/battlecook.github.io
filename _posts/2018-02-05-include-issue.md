@@ -1,6 +1,6 @@
 ---
 layout: post
-title: include 함수 사용시 ./ 경로 이슈
+title: include 함수 사용시 경로 이슈
 comments: true
 ---
 

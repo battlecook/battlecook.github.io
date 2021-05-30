@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  프로그램을 Dockerfile 로 빌드시, 소스코드를 COPY 한 경우와 REPO 에서 클론한 경우의 동작 차이점
+title:  프로그램을 Dockerfile 로 빌드시, 소스코드를 COPY 한 경우와 REPO 에서 클론한 경우의 차이점
 comments: true
 ---
 

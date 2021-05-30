@@ -111,6 +111,8 @@ systemctl restart supervisor
 
 # 슈퍼바이저 명령어 
 
+추후 작성
+
 supervisorctl reread
 supervisorctl update
 

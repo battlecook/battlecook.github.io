@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 배포를 위한 php-fpm 및 opcache 설정
+title: php-fpm 환경에서 파일변경 중 코드 동기화 이슈
 comments: true
 ---
 
