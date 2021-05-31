@@ -213,7 +213,6 @@ Labels:
 
 이런식으로 라벨링을 하면 한 노드에 여러가지 역할을 부여할 수 있습니다.
 
-
 constraints 을 여러개 걸었을 경우 모두 만족하는 node 에만 배포 됩니다.
 
 ```
@@ -227,6 +226,7 @@ deploy:
 
 위와 같이 2가지 제약조건을 건다면 aggregator_role 도 true 이고 log_server_role 도 true 인 node 에만 배포하게 됩니다.
 
-처음에 조건이 and 가 아닌 or 라고 생각해서 stackoverflow 에 질문을 올렸었는데 docs 에 모든조건 만족이라고 나와있다고 친절한 답변을 받았습니다. ( docs 를 좀 더 꼼꼼히 읽어봤어야 했네요 )
+처음에 조건이 and 가 아닌 or 라고 생각해서 stackoverflow 에 질문을 올렸었는데 docs 에 모든조건 만족이라고 나와있다고 친절한 답변을 받았습니다. 
+( docs 를 좀 더 꼼꼼히 읽어봤어야 했네요 )
 
 [https://stackoverflow.com/questions/67761268/docker-swarm-a-problem-that-does-not-work-when-deploying-with-multiple-labels-i/67762721#67762721](https://stackoverflow.com/questions/67761268/docker-swarm-a-problem-that-does-not-work-when-deploying-with-multiple-labels-i/67762721#67762721)
