@@ -126,6 +126,12 @@ deploy:
       endpoint_mode: dnsrr 
 ```
 
+vip 와 dnsrr 설정의 동작방식은 아래 문서에서 확인할 수 있습니다.
+
+[https://sreeninet.wordpress.com/2016/07/29/service-discovery-and-load-balancing-internals-in-docker-1-12/](https://sreeninet.wordpress.com/2016/07/29/service-discovery-and-load-balancing-internals-in-docker-1-12/)
+
+[https://blog.octo.com/en/how-does-it-work-docker-part-3-load-balancing-service-discovery-and-security/](https://blog.octo.com/en/how-does-it-work-docker-part-3-load-balancing-service-discovery-and-security/)
+
 **도커스웜 노드간 포트 공유**
 
 ingress network 로 형성이 되어있기때문에 포트를 binding 하게 되면 컨테이너가 떠있지 않은 node 에서도 해당 포트는 사용 할 수 없습니다.
