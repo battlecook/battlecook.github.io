@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  도커스웜 배포시 stop-first, start-first 에 따른 동작 테스트 및 우아한 종료
+title:  도커스웜 배포시 stop-first, start-first 에 따른 동작 테스트 및 종료 시그널과 우아한 종료
 comments: true
 ---
 
@@ -250,12 +250,16 @@ old program
 
 배포 전 프로그램과 배포 후 프로그램이 모두 응답한 것을 알 수 있습니다.
 
-**테스트  : 도커스웜 배포시 스웜에서 어플리케이션에 주는 인터럽트 시그널 확인**
+**테스트 : 도커스웜 배포시 스웜에서 어플리케이션에 주는 인터럽트 시그널 확인**
 
 [https://docs.docker.com/engine/reference/commandline/stop/](https://docs.docker.com/engine/reference/commandline/stop/)
 
 해당 문서를 보면 docker stop 시에 컨테이너에 SIGTERM 시그널을 보내는 것을 알 수 있습니다.
 
+```text
+The main process inside the container will receive SIGTERM, and after a grace period, SIGKILL. 
+The first signal can be changed with the STOPSIGNAL instruction in the container’s Dockerfile, or the --stop-signal option to docker run.
+```
 docker stack deploy 시에 도커에서보내는 시그널을 확인해 봅시다.
 
 시그널을 확인할 수 있는 코드를 작성 합니다.
@@ -304,7 +308,9 @@ test_signal_simple_program.1.jat4pb6hb0rf@docker-desktop    | sig type : termina
 
 위의 2가지 테스트를 진행하면서 생각해보면 컨테이너에 terminate 시그널을 보내게 된다면 서버의 경우 들어온 요청을 처리해줘야 합니다.
 
-에코프레임웍 깃헙 이슈에 보면 사용자가 시그널이 들어왔을때 적절히 종료하지 않는다는 문의가 있습니다. 답변에 보면 우아한 종료를 제공한다는 답변을 볼수 있습니다.
+golang 에코프레임웍 깃헙 이슈에 보면 사용자가 시그널이 들어왔을때 적절히 종료하지 않는다는 문의가 있습니다. 
+
+답변에 보면 우아한 종료를 제공한다는 답변을 볼수 있습니다.
 
 [https://github.com/labstack/echo/issues/1067](https://github.com/labstack/echo/issues/1067)
 
